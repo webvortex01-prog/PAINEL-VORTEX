@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ink Master | Estúdio de Tatuagem</title>
+  <link rel="stylesheet" href="assets/css/demos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --brand: #d946ef; --brand-glow: rgba(217, 70, 239, 0.4); }
+    body { background: #0a0a0a; font-family: 'Inter', sans-serif; }
+    
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at center right, rgba(217, 70, 239, 0.1) 0%, transparent 60%);
+      position: relative;
+    }
+    
+    .hero-img {
+      width: 100%;
+      height: 600px;
+      background: url('assets/img/demos/tattoo.png') center/cover no-repeat;
+      border-radius: 20px;
+      box-shadow: 0 0 50px rgba(217, 70, 239, 0.15);
+      border: 1px solid rgba(217, 70, 239, 0.2);
+    }
+    
+    .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4rem; margin-bottom: 20px; line-height: 1.1; text-transform: uppercase; font-weight: 800;}
+    .hero h1 span { color: var(--brand); text-shadow: 0 0 20px var(--brand-glow); }
+    .hero p { font-size: 1.15rem; color: rgba(255,255,255,0.6); margin-bottom: 40px; max-width: 500px; }
+    
+    .btn-main { background: transparent; border: 1px solid var(--brand); color: #fff; box-shadow: 0 0 20px var(--brand-glow); border-radius: 5px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;}
+    .btn-main:hover { background: var(--brand); box-shadow: 0 0 30px var(--brand-glow); color: #000; }
+
+    .btn-panel { background: #111; border: 1px solid #333; color: #fff; border-radius: 5px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;}
+    .btn-panel:hover { background: #222; color: #fff; border-color: var(--brand); }
+    
+    /* Artists section */
+    .artist-card { background: #111; border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; transition: transform 0.3s;}
+    .artist-card:hover { transform: translateY(-5px); border-color: var(--brand); }
+    .artist-img { height: 300px; background: #222; display: flex; align-items: center; justify-content: center; font-size: 50px; color: rgba(217, 70, 239, 0.2); }
+    .artist-info { padding: 25px; }
+    .artist-info h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; margin-bottom: 5px; }
+    .artist-info p { font-size: 0.9rem; color: var(--brand); margin-bottom: 15px; font-weight: 600;}
+    
+    /* Services */
+    .service-card { background: #111; border-color: #222; border-radius: 5px;}
+    .service-card i { color: var(--brand); }
+    
+  </style>
+</head>
+<body>
+  
+  <a href="index.html#modelos" class="return-vortex"><i class="fa-solid fa-arrow-left"></i> Fechar Demonstração</a>
+
+  <header class="demo-header" style="background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <a href="#" class="demo-logo"><i class="fa-solid fa-skull" style="color: var(--brand);"></i> INK MASTER</a>
+    <nav class="demo-nav">
+      <a href="#">Artistas</a>
+      <a href="#">Estilos</a>
+      <a href="#">Cuidados</a>
+    </nav>
+    <a href="panel-tattoo.html" class="btn btn-panel" style="padding: 10px 20px; font-size: 12px;"><i class="fa-solid fa-lock"></i> Painel do CEO</a>
+  </header>
+
+  <section class="hero">
+    <div class="container grid-2">
+      <div>
+        <h1>Arte na pele. <br><span>Marcas pra vida.</span></h1>
+        <p>Um estúdio premium focado em realismo, blackwork e neo-traditional. Tatuadores premiados internacionalmente prontos para criar a sua arte exclusiva.</p>
+        <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 30px; flex-wrap: wrap;">
+          <a href="#" class="btn btn-main"><i class="fa-brands fa-whatsapp"></i> Orçamento Exclusivo</a>
+        </div>
+        <div style="display: flex; gap: 20px; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+          <span><i class="fa-solid fa-check" style="color: var(--brand);"></i> Material 100% Descartável</span>
+          <span><i class="fa-solid fa-check" style="color: var(--brand);"></i> Tintas Veganas</span>
+        </div>
+      </div>
+      <div class="hero-img"></div>
+    </div>
+  </section>
+
+  <section style="background: #0d0d0d; border-top: 1px solid #1a1a1a;">
+    <div class="container">
+      <h2 class="section-title">Especialidades</h2>
+      <div class="grid-3">
+        <div class="service-card">
+          <i class="fa-solid fa-droplet"></i>
+          <h3>Realismo Black & Grey</h3>
+          <p>Retratos, animais e texturas ultra-realistas feitas exclusivamente em tons de preto e cinza com alto contraste e durabilidade.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-pen-nib"></i>
+          <h3>Blackwork</h3>
+          <p>Linhas sólidas, geometria sagrada e preenchimentos densos. Uma arte de impacto visual forte e contrastante.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h3>Neo-Traditional</h3>
+          <p>Cores vibrantes, linhas marcadas e uma releitura moderna dos clássicos da tatuagem com temas florais, animais e faces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="demo-footer">
+    <div class="container">
+      <div class="demo-footer-grid">
+        <div>
+          <h4><i class="fa-solid fa-skull" style="color: var(--brand);"></i> INK MASTER</h4>
+          <p>Elevando a tatuagem ao patamar de Fine Art.<br>Estúdio privado. Atendimento apenas com hora marcada.</p>
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Estilos</h4>
+          <ul>
+            <li><a href="#">Realismo</a></li>
+            <li><a href="#">Blackwork</a></li>
+            <li><a href="#">Neo-Traditional</a></li>
+            <li><a href="#">Minimalista</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Estúdio</h4>
+          <ul>
+            <li><a href="#">Artistas</a></li>
+            <li><a href="#">Cuidados Pós-Tattoo</a></li>
+            <li><a href="#">Dúvidas Frequentes</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="demo-footer-bottom">
+        <p>&copy; 2026 Ink Master. Desenvolvido por Web Vortex.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+  <script>
+    setTimeout(() => {
+      const toast = document.createElement('div');
+      toast.className = 'demo-toast';
+      toast.innerHTML = '<i class="fa-solid fa-info-circle" style="color: var(--brand);"></i> Simulação: Veja o botão Painel do CEO no topo!';
+      document.getElementById('toast-container').appendChild(toast);
+    }, 2000);
+  </script>
+</body>
+</html>

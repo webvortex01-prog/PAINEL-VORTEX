@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorriso Prime | Odontologia Avançada</title>
+  <link rel="stylesheet" href="assets/css/demos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --brand: #0ea5e9; --brand-glow: rgba(14, 165, 233, 0.4); }
+    body { background: #f0f9ff; color: #0c4a6e; font-family: 'Inter', sans-serif;}
+    
+    .demo-header { background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(14, 165, 233, 0.1); backdrop-filter: blur(10px); }
+    .demo-logo { color: #0c4a6e; font-weight: 800;}
+    .demo-nav a { color: #0284c7; font-weight: 600;} .demo-nav a:hover { color: #0c4a6e; }
+    
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #f0f9ff 0%, rgba(240,249,255,0.9) 40%, rgba(240,249,255,0) 100%),
+                  url('assets/img/demos/sorriso.png') center/cover no-repeat;
+    }
+    .hero h1 { font-family: 'Inter', sans-serif; font-size: 4.5rem; margin-bottom: 20px; font-weight: 300; line-height: 1.1; color: #082f49;}
+    .hero h1 span { color: var(--brand); font-weight: 800; }
+    
+    .btn-main { background: var(--brand); color: #fff; border-radius: 50px; padding: 18px 36px; font-size: 1.1rem; font-weight: 700;}
+    .btn-main:hover { background: #0284c7; color: #fff; box-shadow: 0 10px 25px var(--brand-glow); transform: translateY(-3px); }
+    
+    .service-card { border-radius: 24px; background: #fff; border: 1px solid rgba(14,165,233,0.1); box-shadow: 0 10px 30px rgba(14,165,233,0.05); padding: 40px; text-align: center; transition: all 0.3s;}
+    .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(14,165,233,0.15);}
+    .service-card h3 { color: #0c4a6e; font-size: 1.4rem; margin-bottom: 15px;}
+    .service-card p { color: #475569; font-size: 1rem; line-height: 1.6;}
+    .service-card i { color: var(--brand); font-size: 45px; margin-bottom: 25px;}
+    
+    .before-after { display: flex; gap: 20px; margin-top: 40px; }
+    .ba-img { width: 100%; height: 250px; border-radius: 20px; background: #e0f2fe; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; font-size: 2rem; position: relative; overflow: hidden;}
+    .ba-img::after { content: ''; position: absolute; bottom: 15px; left: 15px; background: rgba(0,0,0,0.6); padding: 5px 15px; border-radius: 20px; font-size: 1rem; letter-spacing: 1px;}
+    .ba-img.antes::after { content: 'ANTES'; }
+    .ba-img.depois::after { content: 'DEPOIS'; background: var(--brand); }
+    
+    /* Depoimentos */
+    .testimonial { background: #fff; padding: 30px; border-radius: 16px; border: 1px solid #e0f2fe; text-align: left; box-shadow: 0 10px 20px rgba(0,0,0,0.02);}
+    .stars { color: #facc15; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+  <a href="modelos.html" class="return-vortex" style="background: #fff; color: #0c4a6e; border: 1px solid #bae6fd;"><i class="fa-solid fa-arrow-left"></i> Fechar Demonstração</a>
+
+  <header class="demo-header">
+    <a href="#" class="demo-logo"><i class="fa-solid fa-tooth" style="color: var(--brand);"></i> SORRISO PRIME</a>
+    <nav class="demo-nav">
+      <a href="#">Especialidades</a>
+      <a href="#">Lentes de Contato</a>
+      <a href="#">Resultados</a>
+      <a href="#">A Clínica</a>
+    </nav>
+    <a href="#" class="btn btn-main" style="padding: 10px 20px; font-size: 13px;">Agendar Avaliação VIP</a>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div style="max-width: 600px;">
+        <h1>A tecnologia a favor do seu <span>Novo Sorriso</span>.</h1>
+        <p style="font-size: 1.2rem; color: #334155; margin-bottom: 40px; line-height: 1.7;">Mais que odontologia, nós entregamos autoestima. Especialistas em implantes sem dor, lentes de contato de porcelana e harmonização orofacial na clínica mais tecnológica e acolhedora da região.</p>
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 40px;">
+            <a href="#" class="btn btn-main"><i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Falar com Atendimento</a>
+            <span style="color: #0284c7; font-weight: 600; font-size: 0.9rem;"><i class="fa-solid fa-check" style="margin-right: 5px;"></i> Avaliação Gratuita</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #fff;">
+    <div class="container">
+      <h2 class="section-title" style="color: #0c4a6e;">Nossos Tratamentos</h2>
+      <div class="grid-3">
+        <div class="service-card">
+          <i class="fa-solid fa-gem"></i>
+          <h3>Lentes de Contato</h3>
+          <p>O sorriso dos famosos em poucos dias. Correção definitiva de cor, formato e alinhamento com facetas de porcelana ultrafina e desgaste quase zero dos seus dentes naturais.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <h3>Implantes Dentários</h3>
+          <p>Recupere a segurança para mastigar e sorrir sem medo. Realizamos implantes de carga imediata utilizando sedação consciente. O procedimento é 100% indolor.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-face-smile-beam"></i>
+          <h3>Clareamento a Laser</h3>
+          <p>Dentes notavelmente mais brancos e brilhantes em uma única sessão na clínica. Utilizamos gel importado que protege o esmalte e evita aquela sensibilidade incômoda.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-child-reaching"></i>
+          <h3>Odontopediatria</h3>
+          <p>Cuidado especial, lúdico e sem traumas para os pequenos. Prevenção e tratamento com foco na criação de uma geração sem medo de ir ao dentista.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-syringe"></i>
+          <h3>Harmonização Facial</h3>
+          <p>Botox preventivo, preenchimento labial e de malar. Ajustes sutis que realçam sua beleza natural e complementam o seu novo sorriso perfeito.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-teeth"></i>
+          <h3>Ortodontia Invisível</h3>
+          <p>Alinhadores transparentes (Invisalign). Corrija a posição dos seus dentes de forma discreta, rápida e muito mais confortável que os aparelhos fixos tradicionais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section style="background: #f0f9ff; text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="color: #0c4a6e; margin-bottom: 20px;">Resultados Reais</h2>
+      <p style="color: #475569; max-width: 600px; margin: 0 auto 50px auto;">Arraste para o lado e veja a transformação. O próximo sorriso pode ser o seu.</p>
+      
+      <div class="before-after" style="max-width: 800px; margin: 0 auto;">
+        <div class="ba-img antes" style="background: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+        <div class="ba-img depois" style="background: url('https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+      </div>
+    </div>
+  </section>
+  
+  <section style="background: #fff;">
+    <div class="container">
+      <h2 class="section-title" style="color: #0c4a6e;">Pacientes Transformados</h2>
+      <div class="grid-3">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p style="color: #334155; font-style: italic; margin-bottom: 20px;">"Eu tinha pavor de dentista e vergonha do meu sorriso. A equipe da Sorriso Prime me acolheu de uma forma incrível. Fiz minhas lentes de contato e hoje não paro de sorrir para as fotos!"</p>
+          <h4 style="color: #082f49;">— Mariana Costa</h4>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p style="color: #334155; font-style: italic; margin-bottom: 20px;">"Procedimento de implante impecável. Dormi e quando acordei já estava com os dentes novos. Zero dor, zero inchaço. A clínica é linda e a tecnologia que eles usam é de outro mundo."</p>
+          <h4 style="color: #082f49;">— Carlos Mendes</h4>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p style="color: #334155; font-style: italic; margin-bottom: 20px;">"Coloquei o Invisalign aqui e foi a melhor escolha. Ninguém nem percebia que eu estava usando aparelho. Em 8 meses meus dentes estavam perfeitos. O atendimento via WhatsApp também é super rápido."</p>
+          <h4 style="color: #082f49;">— Beatriz Silva</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="demo-footer">
+  <div class="container demo-footer-grid">
+    <div>
+      <h4 style="font-family: 'Space Grotesk', sans-serif;">VORTEX</h4>
+      <p>Este é um site de demonstração de alta performance criado pela Vortex. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="#">Sobre o Modelo</a></li>
+        <li><a href="#">Diferenciais</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Suporte VIP</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> (66) 99937-3778</li>
+        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@vortex.com</li>
+        <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Atendimento Global</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-footer-bottom">
+    <p>&copy; 2026 Vortex Web. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="assets/js/demos.js"></script>
+</body>
+
+</html>

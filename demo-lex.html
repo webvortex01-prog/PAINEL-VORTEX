@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lex | Advocacia Estratégica</title>
+  <link rel="stylesheet" href="assets/css/demos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --brand: #3b82f6; --brand-glow: rgba(59, 130, 246, 0.3); }
+    body { background: #0f172a; font-family: 'Inter', serif; }
+    
+    .demo-header { background: rgba(15, 23, 42, 0.9); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(30,58,138,0.85) 100%),
+                  url('assets/img/demos/lex.png') center/cover no-repeat;
+      position: relative;
+    }
+    
+    .hero h1 { font-family: 'Space Grotesk', serif; font-size: 4rem; margin-bottom: 20px; font-weight: 400; line-height: 1.1; }
+    .hero h1 span { color: #93c5fd; font-weight: 700; }
+    .hero p { font-size: 1.2rem; color: #cbd5e1; margin-bottom: 40px; max-width: 600px; line-height: 1.7; }
+    
+    .btn-main { background: #fff; color: #0f172a; border-radius: 4px; padding: 16px 32px; font-weight: 700;}
+    .btn-main:hover { background: #cbd5e1; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
+    
+    .partner-card { display: flex; flex-direction: column; align-items: center; background: rgba(255,255,255,0.02); padding: 30px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); text-align: center;}
+    .partner-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 2px solid var(--brand);}
+    .partner-card h4 { font-family: 'Space Grotesk', serif; font-size: 1.3rem; margin-bottom: 5px; color: #fff;}
+    .partner-card p { font-size: 0.95rem; color: #94a3b8; margin-bottom: 15px;}
+    
+    .service-card { border-radius: 4px; background: rgba(255,255,255,0.02); text-align: left; border-left: 4px solid var(--brand); padding: 40px 30px; transition: all 0.3s;}
+    .service-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-5px);}
+    .service-card i { color: #93c5fd; font-size: 30px; margin-bottom: 15px;}
+    .service-card h3 { font-family: 'Space Grotesk', serif; font-size: 1.5rem; margin-bottom: 15px; }
+    
+    /* Stats */
+    .stats-section { background: #1e293b; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);}
+    .stat-item { text-align: center; }
+    .stat-number { font-family: 'Space Grotesk', serif; font-size: 3rem; color: #93c5fd; font-weight: 700; margin-bottom: 10px;}
+    .stat-label { font-size: 1rem; color: #cbd5e1; text-transform: uppercase; letter-spacing: 1px;}
+  </style>
+</head>
+<body>
+  <a href="modelos.html" class="return-vortex"><i class="fa-solid fa-arrow-left"></i> Fechar Demonstração</a>
+
+  <header class="demo-header">
+    <a href="#" class="demo-logo"><i class="fa-solid fa-scale-balanced" style="color: var(--brand);"></i> LEX ADVOCACIA</a>
+    <nav class="demo-nav">
+      <a href="#">Áreas de Atuação</a>
+      <a href="#">O Escritório</a>
+      <a href="#">Nossa Equipe</a>
+    </nav>
+    <a href="#" class="btn btn-main" style="padding: 10px 20px; font-size: 13px; background:transparent; border: 1px solid #fff; color:#fff;">Portal do Cliente</a>
+  </header>
+
+  <section class="hero">
+    <div class="container grid-2">
+      <div>
+        <h1>Protegendo o seu patrimônio com <span>Estratégia e Inteligência Jurídica</span>.</h1>
+        <p>Atuação ultra-especializada em Direito Empresarial, Tributário e Cível. Somos o escudo jurídico do seu negócio. Resolvemos conflitos complexos com precisão cirúrgica para que você foque apenas em lucrar e crescer.</p>
+        <a href="#" class="btn btn-main">Agendar Consultoria Inicial</a>
+      </div>
+      <div>
+        <div style="background: rgba(15,23,42,0.8); padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+          <h3 style="font-family: 'Space Grotesk', serif; font-size: 1.5rem; margin-bottom: 20px; color: #fff;">Análise de Viabilidade (Sigilo Absoluto)</h3>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 25px;">Preencha o formulário abaixo. Um de nossos sócios seniores entrará em contato em até 4 horas úteis.</p>
+          <input type="text" placeholder="Nome Completo / Empresa" style="width: 100%; padding: 15px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 4px;">
+          <input type="email" placeholder="E-mail Corporativo" style="width: 100%; padding: 15px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 4px;">
+          <input type="text" placeholder="Telefone (WhatsApp)" style="width: 100%; padding: 15px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 4px;">
+          <textarea placeholder="Breve Resumo do Caso ou Desafio Atual" rows="3" style="width: 100%; padding: 15px; margin-bottom: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 4px; resize: none;"></textarea>
+          <button class="btn btn-main" style="width: 100%; justify-content: center; background: var(--brand); color: #fff; border: none;">Solicitar Análise Gratuita</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-section">
+    <div class="container grid-3">
+      <div class="stat-item">
+        <div class="stat-number">+15 Anos</div>
+        <div class="stat-label">De Experiência Sólida</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">R$ 120M+</div>
+        <div class="stat-label">Patrimônio Recuperado</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Taxa de Êxito em Acordos</div>
+      </div>
+    </div>
+  </div>
+
+  <section style="background: #0b1120;">
+    <div class="container">
+      <h2 class="section-title">Núcleos de Atuação</h2>
+      <div class="grid-3">
+        <div class="service-card">
+          <i class="fa-solid fa-briefcase"></i>
+          <h3>Direito Empresarial</h3>
+          <p>Estruturação societária, blindagem patrimonial, fusões e aquisições (M&A) e elaboração de contratos complexos. Proteção total desde a fundação.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-file-invoice-dollar"></i>
+          <h3>Direito Tributário</h3>
+          <p>Revisão fiscal profunda, planejamento tributário agressivo (porém 100% legal), recuperação de créditos e defesas em pesadas execuções fiscais.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-gavel"></i>
+          <h3>Contencioso Cível</h3>
+          <p>Atuação incisiva e altamente técnica em disputas contratuais, recuperação de crédito, responsabilidade civil e litígios nos Tribunais Superiores (STJ e STF).</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-building-columns"></i>
+          <h3>Direito Imobiliário</h3>
+          <p>Due diligence, estruturação de fundos imobiliários, incorporações e regularização fundiária de grandes áreas.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-user-tie"></i>
+          <h3>Direito Trabalhista Patronal</h3>
+          <p>Atuação exclusiva pela empresa. Defesa em passivos trabalhistas, auditoria preventiva e elaboração de políticas internas de compliance.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Direito Digital e LGPD</h3>
+          <p>Adequação à Lei Geral de Proteção de Dados, contratos de tecnologia, termos de uso e defesa em crimes cibernéticos corporativos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section style="background: #0f172a;">
+    <div class="container">
+      <h2 class="section-title">Sócios Fundadores</h2>
+      <div class="grid-3">
+        <div class="partner-card">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Sócio">
+          <h4>Dr. Henrique Lex</h4>
+          <p>OAB/SP 123.456 - Especialista em Tributário e M&A pela FGV. Ex-auditor com visão 360º sobre passivos fiscais.</p>
+          <a href="#" style="color: #93c5fd; font-size: 0.9rem; text-decoration: none;">Ver Currículo Completo &rarr;</a>
+        </div>
+        <div class="partner-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Sócia">
+          <h4>Dra. Camila Torres</h4>
+          <p>OAB/SP 654.321 - Mestre em Direito Empresarial pela USP. Referência nacional em blindagem patrimonial.</p>
+          <a href="#" style="color: #93c5fd; font-size: 0.9rem; text-decoration: none;">Ver Currículo Completo &rarr;</a>
+        </div>
+        <div class="partner-card">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Sócio">
+          <h4>Dr. Roberto Silva</h4>
+          <p>OAB/SP 987.654 - Head de Contencioso Cível. Mais de 500 sustentações orais nos tribunais superiores.</p>
+          <a href="#" style="color: #93c5fd; font-size: 0.9rem; text-decoration: none;">Ver Currículo Completo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<footer class="demo-footer">
+  <div class="container demo-footer-grid">
+    <div>
+      <h4 style="font-family: 'Space Grotesk', sans-serif;">VORTEX</h4>
+      <p>Este é um site de demonstração de alta performance criado pela Vortex. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="#">Sobre o Modelo</a></li>
+        <li><a href="#">Diferenciais</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Suporte VIP</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> (66) 99937-3778</li>
+        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@vortex.com</li>
+        <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Atendimento Global</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-footer-bottom">
+    <p>&copy; 2026 Vortex Web. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="assets/js/demos.js"></script>
+</body>
+
+</html>

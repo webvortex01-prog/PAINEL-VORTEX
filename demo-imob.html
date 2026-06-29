@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imob | Inteligência Imobiliária</title>
+  <link rel="stylesheet" href="assets/css/demos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --brand: #10b981; --brand-glow: rgba(16, 185, 129, 0.4); }
+    body { background: #f8fafc; color: #0f172a; font-family: 'Inter', sans-serif;}
+    
+    .demo-header { background: rgba(255,255,255,0.95); border-bottom: 1px solid #e2e8f0; backdrop-filter: blur(10px); }
+    .demo-logo { color: #0f172a; }
+    .demo-nav a { color: #64748b; } .demo-nav a:hover { color: var(--brand); }
+    
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #f8fafc 0%, rgba(248,250,252,0.9) 40%, rgba(248,250,252,0) 100%),
+                  url('assets/img/demos/imob.png') center/cover no-repeat;
+    }
+    .hero h1 { font-family: 'Inter', sans-serif; font-size: 4.5rem; margin-bottom: 20px; color: #0f172a; font-weight: 800; line-height: 1.1;}
+    .hero h1 span { color: var(--brand); }
+    
+    .btn-main { background: var(--brand); color: #fff; border-radius: 8px; font-size: 1.1rem; padding: 18px 36px; font-weight: 600;}
+    .btn-main:hover { background: #047857; box-shadow: 0 10px 25px var(--brand-glow); transform: translateY(-3px);}
+    
+    /* Search Bar mock */
+    .search-mock { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); display: flex; gap: 15px; margin-top: 40px; max-width: 700px; border: 1px solid #e2e8f0;}
+    .search-mock input { flex: 1; border: none; outline: none; font-size: 1rem; color: #334155; padding-left: 10px;}
+    
+    /* Property Grid */
+    .prop-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; transition: all 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.03); display: flex; flex-direction: column;}
+    .prop-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .prop-img { height: 250px; background: #e2e8f0; position: relative;}
+    .prop-tag { position: absolute; top: 15px; left: 15px; background: var(--brand); color: #fff; padding: 6px 12px; border-radius: 6px; font-weight: bold; font-size: 0.8rem;}
+    .prop-info { padding: 25px; display: flex; flex-direction: column; flex-grow: 1;}
+    .prop-price { font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;}
+    .prop-address { color: #64748b; margin-bottom: 20px; font-size: 0.95rem;}
+    .prop-meta { display: flex; gap: 15px; color: #475569; font-size: 0.9rem; border-top: 1px solid #f1f5f9; padding-top: 15px; margin-top: auto;}
+    
+    /* Stats */
+    .imob-stats { display: flex; gap: 40px; margin-top: 50px; }
+    .imob-stat h3 { font-size: 2.5rem; color: #0f172a; font-weight: 800;}
+    .imob-stat p { color: #64748b; font-size: 0.9rem; text-transform: uppercase;}
+  </style>
+</head>
+<body>
+  <a href="modelos.html" class="return-vortex" style="background: #fff; color: #0f172a; border: 1px solid #e2e8f0;"><i class="fa-solid fa-arrow-left"></i> Fechar Demonstração</a>
+  
+  <header class="demo-header">
+    <a href="#" class="demo-logo"><i class="fa-solid fa-building" style="color: var(--brand);"></i> IMOB</a>
+    <nav class="demo-nav"><a href="#">Comprar</a><a href="#">Alugar</a><a href="#">Lançamentos</a><a href="#">Corretores</a></nav>
+    <a href="#" class="btn btn-main" style="padding: 10px 20px; font-size: 13px;">Anunciar Imóvel</a>
+  </header>
+  
+  <section class="hero">
+    <div class="container">
+      <div style="max-width: 750px;">
+        <h1>Onde o seu <span>alto padrão</span> de vida acontece.</h1>
+        <p style="font-size: 1.2rem; color: #475569; line-height: 1.6;">A curadoria imobiliária mais exclusiva da região. Mansões em condomínio fechado, coberturas com vista mar e oportunidades únicas de investimento com segurança jurídica.</p>
+        
+        <div class="search-mock">
+          <i class="fa-solid fa-magnifying-glass" style="color: #94a3b8; font-size: 1.2rem; margin-top: 2px;"></i>
+          <input type="text" placeholder="Digite o bairro, cidade, condomínio ou ID do imóvel...">
+          <button class="btn btn-main" style="padding: 10px 25px; border-radius: 6px; font-size: 1rem;">Buscar</button>
+        </div>
+        
+        <div class="imob-stats">
+          <div class="imob-stat"><h3>+500</h3><p>Imóveis Premium</p></div>
+          <div class="imob-stat"><h3>R$ 2B</h3><p>Em VGV Negociado</p></div>
+          <div class="imob-stat"><h3>98%</h3><p>Clientes Satisfeitos</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section style="background: #f1f5f9;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+        <h2 class="section-title" style="color: #0f172a; margin: 0;">Imóveis em Destaque</h2>
+        <a href="#" style="color: var(--brand); font-weight: 600; text-decoration: none;">Ver Catálogo Completo &rarr;</a>
+      </div>
+      <div class="grid-3" style="margin-bottom: 30px;">
+        <!-- Imóvel 1 -->
+        <div class="prop-card">
+          <div class="prop-img" style="background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"><span class="prop-tag">À Venda</span></div>
+          <div class="prop-info">
+            <div class="prop-price">R$ 2.450.000</div>
+            <div class="prop-address"><i class="fa-solid fa-location-dot" style="color: var(--brand);"></i> Condomínio Alphaville, Quadra 4</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 4 Quartos</span>
+              <span><i class="fa-solid fa-bath"></i> 5 Banhos</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 320m²</span>
+            </div>
+          </div>
+        </div>
+        <!-- Imóvel 2 -->
+        <div class="prop-card">
+          <div class="prop-img" style="background: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"><span class="prop-tag" style="background: #3b82f6;">Locação</span></div>
+          <div class="prop-info">
+            <div class="prop-price">R$ 15.000<span style="font-size: 1rem; color:#64748b; font-weight: normal;">/mês</span></div>
+            <div class="prop-address"><i class="fa-solid fa-location-dot" style="color: var(--brand);"></i> Cobertura Jardim Botânico</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 3 Suítes</span>
+              <span><i class="fa-solid fa-car"></i> 3 Vagas</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 180m²</span>
+            </div>
+          </div>
+        </div>
+        <!-- Imóvel 3 -->
+        <div class="prop-card">
+          <div class="prop-img" style="background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"><span class="prop-tag">À Venda</span></div>
+          <div class="prop-info">
+            <div class="prop-price">R$ 3.800.000</div>
+            <div class="prop-address"><i class="fa-solid fa-location-dot" style="color: var(--brand);"></i> Mansão Contemporânea, Lago Sul</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 5 Quartos</span>
+              <span><i class="fa-solid fa-swimming-pool"></i> Piscina</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 450m²</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-3">
+        <!-- Imóvel 4 -->
+        <div class="prop-card">
+          <div class="prop-img" style="background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"><span class="prop-tag" style="background: #f59e0b;">Lançamento</span></div>
+          <div class="prop-info">
+            <div class="prop-price">A partir de R$ 900.000</div>
+            <div class="prop-address"><i class="fa-solid fa-location-dot" style="color: var(--brand);"></i> Torre Llum, Centro Executivo</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 2 a 3 Suítes</span>
+              <span><i class="fa-solid fa-dumbbell"></i> Lazer Completo</span>
+            </div>
+          </div>
+        </div>
+        <!-- Imóvel 5 -->
+        <div class="prop-card">
+          <div class="prop-img" style="background: url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"><span class="prop-tag">À Venda</span></div>
+          <div class="prop-info">
+            <div class="prop-price">R$ 1.250.000</div>
+            <div class="prop-address"><i class="fa-solid fa-location-dot" style="color: var(--brand);"></i> Casa Plana, Residencial das Flores</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-bed"></i> 3 Quartos</span>
+              <span><i class="fa-solid fa-tree"></i> Quintal Amplo</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 200m²</span>
+            </div>
+          </div>
+        </div>
+        <!-- Imóvel 6 -->
+        <div class="prop-card">
+          <div class="prop-img" style="background: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"><span class="prop-tag">À Venda</span></div>
+          <div class="prop-info">
+            <div class="prop-price">R$ 5.500.000</div>
+            <div class="prop-address"><i class="fa-solid fa-location-dot" style="color: var(--brand);"></i> Fazenda Vista Linda, Interior</div>
+            <div class="prop-meta">
+              <span><i class="fa-solid fa-tractor"></i> 15 Hectares</span>
+              <span><i class="fa-solid fa-water"></i> Represa Privativa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <section style="background: #0f172a; padding: 80px 0;">
+    <div class="container grid-2" style="align-items: center;">
+      <div>
+        <h2 style="color: #fff; font-size: 2.5rem; margin-bottom: 20px;">Não encontrou o que procurava?</h2>
+        <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 30px;">Temos imóveis exclusivos off-market que não são anunciados publicamente. Deixe suas preferências e nosso time de Hunters encontrará a propriedade ideal.</p>
+      </div>
+      <div style="background: #1e293b; padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+        <input type="text" placeholder="Seu Nome" style="width: 100%; padding: 15px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 6px;">
+        <input type="email" placeholder="E-mail" style="width: 100%; padding: 15px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 6px;">
+        <button class="btn btn-main" style="width: 100%; justify-content: center; font-size: 1.1rem;">Acionar Equipe Hunter</button>
+      </div>
+    </div>
+  </section>
+
+<footer class="demo-footer">
+  <div class="container demo-footer-grid">
+    <div>
+      <h4 style="font-family: 'Space Grotesk', sans-serif;">VORTEX</h4>
+      <p>Este é um site de demonstração de alta performance criado pela Vortex. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="#">Sobre o Modelo</a></li>
+        <li><a href="#">Diferenciais</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Suporte VIP</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> (66) 99937-3778</li>
+        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@vortex.com</li>
+        <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Atendimento Global</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-footer-bottom">
+    <p>&copy; 2026 Vortex Web. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="assets/js/demos.js"></script>
+</body>
+
+</html>

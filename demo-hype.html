@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hype | Streetwear</title>
+  <link rel="stylesheet" href="assets/css/demos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --brand: #a855f7; --brand-glow: rgba(168, 85, 247, 0.4); }
+    body { background: #000; font-family: 'Inter', sans-serif; }
+    
+    .demo-header { background: transparent; border: none; z-index: 1000;}
+    .demo-logo { font-size: 30px; letter-spacing: 5px; text-transform: uppercase; font-family: 'Space Grotesk', sans-serif; }
+    .demo-nav a { text-transform: uppercase; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1px;}
+    
+    .hero { 
+      min-height: 100vh; 
+      display: flex; 
+      align-items: center; 
+      background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%),
+                  url('assets/img/demos/hype.png') center/cover no-repeat; 
+    }
+    .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 8rem; line-height: 0.9; text-transform: uppercase; margin-bottom: 20px;}
+    .hero h1 span { -webkit-text-stroke: 2px var(--brand); color: transparent; }
+    
+    .btn-main { background: #fff; color: #000; border-radius: 0; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; padding: 20px 40px; transition: all 0.3s;}
+    .btn-main:hover { background: var(--brand); color: #fff; box-shadow: 0 0 30px var(--brand-glow);}
+    
+    /* Marquee */
+    .marquee-container { width: 100%; background: var(--brand); overflow: hidden; padding: 15px 0; border-top: 2px solid #fff; border-bottom: 2px solid #fff;}
+    .marquee { display: flex; white-space: nowrap; animation: marquee 20s linear infinite; font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: #000; font-weight: 800; text-transform: uppercase;}
+    .marquee span { padding: 0 40px; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    
+    /* Product Grid */
+    .prod-card { background: #111; cursor: pointer; transition: transform 0.3s; position: relative;}
+    .prod-card:hover { transform: translateY(-10px); }
+    .prod-img { height: 400px; background: #222; display: flex; align-items: center; justify-content: center; position: relative;}
+    .prod-img::after { content: 'ADICIONAR'; position: absolute; bottom: 0; left: 0; width: 100%; background: var(--brand); color: #fff; font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-align: center; padding: 15px 0; transform: translateY(100%); opacity: 0; transition: all 0.3s;}
+    .prod-card:hover .prod-img::after { transform: translateY(0); opacity: 1;}
+    .prod-tag { position: absolute; top: 15px; right: 15px; background: #fff; color: #000; font-family: 'Space Grotesk', sans-serif; padding: 5px 10px; font-size: 0.8rem; font-weight: 800; z-index: 2;}
+    .prod-info { padding: 20px; display: flex; justify-content: space-between; align-items: center;}
+    .prod-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; text-transform: uppercase;}
+    .prod-price { font-size: 1.1rem; color: #aaa; font-family: 'Inter', sans-serif;}
+    
+    /* Lookbook Banner */
+    .lookbook { height: 500px; background: url('https://images.unsplash.com/photo-1523398002811-999aa8e9f5b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover; display: flex; align-items: center; justify-content: center; position: relative;}
+    .lookbook::after { content: ''; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6);}
+    .lookbook h2 { position: relative; z-index: 2; font-family: 'Space Grotesk', sans-serif; font-size: 5rem; text-transform: uppercase; letter-spacing: 5px;}
+  </style>
+</head>
+<body>
+  <a href="modelos.html" class="return-vortex"><i class="fa-solid fa-arrow-left"></i> Fechar Demonstração</a>
+  
+  <header class="demo-header">
+    <a href="#" class="demo-logo">HYPE.</a>
+    <nav class="demo-nav"><a href="#">Shop All</a><a href="#">Drop 01</a><a href="#">Acessórios</a><a href="#">Sobre</a></nav>
+    <a href="#" class="btn btn-main" style="padding: 10px 20px; font-size: 13px; background: transparent; color: #fff; border: 2px solid #fff;"><i class="fa-solid fa-cart-shopping"></i> (0)</a>
+  </header>
+  
+  <section class="hero">
+    <div class="container">
+      <div style="max-width: 600px;">
+        <h1>NEW<br><span>DROP 01</span></h1>
+        <p style="margin-bottom: 40px; color: #aaa; font-size: 1.2rem; line-height: 1.6;">A nova coleção limitada já está disponível. Peças exclusivas, tecido premium over-sized e modelagem streetwear autêntica. Vista o underground antes que esgote.</p>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" class="btn btn-main">Comprar Coleção</a>
+          <a href="#" class="btn btn-main" style="background: transparent; color: #fff; border: 2px solid #fff;">Ver Lookbook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="marquee-container">
+    <div class="marquee">
+      <span>🔥 FRETE GRÁTIS ACIMA DE R$ 300</span>
+      <span>🔥 DROP LIMITADO - RESTAM POUCAS PEÇAS</span>
+      <span>🔥 OVERSIZED FIT</span>
+      <span>🔥 FRETE GRÁTIS ACIMA DE R$ 300</span>
+      <span>🔥 DROP LIMITADO - RESTAM POUCAS PEÇAS</span>
+      <span>🔥 OVERSIZED FIT</span>
+    </div>
+  </div>
+  
+  <section style="background: #050505;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+        <h2 class="section-title" style="font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; font-size: 3rem; margin: 0;">Shop Now</h2>
+        <a href="#" style="color: var(--brand); font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; text-decoration: none;">Ver Tudo &rarr;</a>
+      </div>
+      
+      <div class="grid-3" style="margin-bottom: 30px;">
+        <div class="prod-card">
+          <div class="prod-tag">NOVO</div>
+          <div class="prod-img" style="background: url('https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="prod-info">
+            <div class="prod-title">Camiseta Over Black</div>
+            <div class="prod-price">R$ 149,90</div>
+          </div>
+        </div>
+        
+        <div class="prod-card">
+          <div class="prod-tag">ESGOTANDO</div>
+          <div class="prod-img" style="background: url('https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="prod-info">
+            <div class="prod-title">Moletom Hype Dark</div>
+            <div class="prod-price">R$ 299,90</div>
+          </div>
+        </div>
+        
+        <div class="prod-card">
+          <div class="prod-img" style="background: url('https://images.unsplash.com/photo-1516826957135-700ede19c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="prod-info">
+            <div class="prod-title">Calça Cargo Tactical</div>
+            <div class="prod-price">R$ 259,90</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-3">
+        <div class="prod-card">
+          <div class="prod-img" style="background: url('https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="prod-info">
+            <div class="prod-title">Bucket Hat Logo</div>
+            <div class="prod-price">R$ 89,90</div>
+          </div>
+        </div>
+        
+        <div class="prod-card">
+          <div class="prod-img" style="background: url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="prod-info">
+            <div class="prod-title">T-Shirt Washed Acid</div>
+            <div class="prod-price">R$ 139,90</div>
+          </div>
+        </div>
+        
+        <div class="prod-card">
+          <div class="prod-img" style="background: url('https://images.unsplash.com/photo-1608231387042-66d1773070a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="prod-info">
+            <div class="prod-title">Tênis Chunky V1</div>
+            <div class="prod-price">R$ 499,90</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="lookbook">
+    <h2>We Are Hype.</h2>
+  </div>
+  
+  
+
+<footer class="demo-footer">
+  <div class="container demo-footer-grid">
+    <div>
+      <h4 style="font-family: 'Space Grotesk', sans-serif;">VORTEX</h4>
+      <p>Este é um site de demonstração de alta performance criado pela Vortex. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="#">Sobre o Modelo</a></li>
+        <li><a href="#">Diferenciais</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Suporte VIP</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> (66) 99937-3778</li>
+        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@vortex.com</li>
+        <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Atendimento Global</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-footer-bottom">
+    <p>&copy; 2026 Vortex Web. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="assets/js/demos.js"></script>
+</body>
+
+</html>

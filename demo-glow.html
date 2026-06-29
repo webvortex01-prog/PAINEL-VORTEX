@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow | Clínica de Estética</title>
+  <link rel="stylesheet" href="assets/css/demos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --brand: #f472b6; --brand-glow: rgba(244, 114, 182, 0.4); }
+    body { background: #09090b; font-family: 'Inter', sans-serif;}
+    
+    .demo-header { background: rgba(9, 9, 11, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05);}
+    
+    .hero { 
+      min-height: 100vh; 
+      display: flex; 
+      align-items: center; 
+      background: radial-gradient(circle at left, rgba(244,114,182,0.15) 0%, transparent 60%),
+                  url('assets/img/demos/glow.png') right center/cover no-repeat; 
+    }
+    
+    .hero-content {
+      background: rgba(9,9,11,0.7);
+      padding: 60px;
+      border-radius: 30px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.1);
+      max-width: 650px;
+    }
+    
+    .hero h1 { font-family: 'Space Grotesk', serif; font-size: 4.5rem; margin-bottom: 20px; font-weight: 400; line-height: 1.1; }
+    .hero h1 span { font-style: italic; color: var(--brand); font-weight: 600;}
+    
+    .btn-main { background: var(--brand); color: #000; border-radius: 50px; font-size: 1.1rem; padding: 16px 32px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;}
+    .btn-main:hover { background: #fbcfe8; box-shadow: 0 0 30px var(--brand-glow); }
+    
+    .btn-panel { background: #111; border: 1px solid #333; color: #fff; border-radius: 5px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;}
+    .btn-panel:hover { background: #222; color: #fff; border-color: var(--brand); }
+    
+    /* Horizontal scroll for procedures */
+    .proc-scroll { display: flex; gap: 30px; overflow-x: auto; padding-bottom: 30px; scrollbar-width: none; cursor: grab;}
+    .proc-scroll::-webkit-scrollbar { display: none; }
+    
+    .proc-card { 
+      min-width: 320px; 
+      height: 450px; 
+      border-radius: 20px; 
+      background: rgba(255,255,255,0.03); 
+      border: 1px solid rgba(255,255,255,0.05); 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: flex-end; 
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s;
+    }
+    .proc-card::before {
+      content: ''; position: absolute; top:0; left:0; right:0; bottom:0;
+      background: linear-gradient(0deg, rgba(244,114,182,0.9) 0%, rgba(244,114,182,0.1) 50%, transparent 100%);
+      opacity: 0.2; transition: opacity 0.4s;
+    }
+    .proc-card:hover { transform: translateY(-10px); }
+    .proc-card:hover::before { opacity: 0.8; }
+    
+    .proc-card h3 { position: relative; z-index: 2; font-family: 'Space Grotesk', serif; font-size: 1.8rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5);}
+    .proc-card p { position: relative; z-index: 2; color: #f4f4f5; margin-top: 10px; line-height: 1.5; text-shadow: 0 1px 5px rgba(0,0,0,0.8);}
+    .proc-card .btn-small { position: relative; z-index: 2; margin-top: 20px; align-self: flex-start; padding: 8px 20px; background: #fff; color: #000; border-radius: 30px; font-size: 0.9rem; text-decoration: none; font-weight: 600;}
+    
+    /* FAQ */
+    .faq-item { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; margin-bottom: 15px; padding: 25px; cursor: pointer; transition: all 0.3s;}
+    .faq-item:hover { background: rgba(255,255,255,0.05); border-color: var(--brand); }
+    .faq-question { font-family: 'Space Grotesk', serif; font-size: 1.2rem; display: flex; justify-content: space-between; align-items: center;}
+    .faq-answer { color: #a1a1aa; margin-top: 15px; line-height: 1.6; font-size: 0.95rem;}
+  </style>
+</head>
+<body>
+  <a href="modelos.html" class="return-vortex"><i class="fa-solid fa-arrow-left"></i> Fechar Demonstração</a>
+  
+  <header class="demo-header">
+    <a href="#" class="demo-logo"><i class="fa-solid fa-spa" style="color: var(--brand);"></i> GLOW</a>
+    <nav class="demo-nav"><a href="#">Tratamentos Faciais</a><a href="#">Tratamentos Corporais</a><a href="#">A Clínica</a></nav>
+    <div style="display: flex; gap: 15px;">
+      <a href="panel-glow.html" class="btn btn-panel" style="padding: 10px 20px; font-size: 12px;"><i class="fa-solid fa-lock"></i> Painel do CEO</a>
+      <a href="#" class="btn btn-main" style="padding: 10px 20px; font-size: 12px;">Agendar Avaliação</a>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Revele a sua melhor <span>versão</span>.</h1>
+        <p style="color: #d4d4d8; font-size: 1.2rem; margin-bottom: 40px; line-height: 1.6;">A Clínica Glow combina tecnologia de ponta, protocolos exclusivos e um ambiente de puro relaxamento. Realce sua beleza natural, reduza medidas e previna o envelhecimento com segurança médica e extrema sofisticação.</p>
+        <a href="#" class="btn btn-main">Conheça Nossos Protocolos VIP</a>
+      </div>
+    </div>
+  </section>
+  
+  <section style="background: #18181b;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px;">
+        <div>
+          <h2 class="section-title" style="margin-bottom: 10px; text-align: left;">Procedimentos Assinatura</h2>
+          <p style="color: #a1a1aa;">Deslize para o lado e escolha o tratamento ideal para você.</p>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button style="background: rgba(255,255,255,0.1); border:none; width: 40px; height: 40px; border-radius: 50%; color: #fff; cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></button>
+          <button style="background: var(--brand); border:none; width: 40px; height: 40px; border-radius: 50%; color: #000; cursor: pointer;"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+      
+      <div class="proc-scroll">
+        <div class="proc-card" style="background: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;">
+          <h3>Harmonização Facial</h3>
+          <p>Aplicação estratégica de Botox, preenchimento com ácido hialurônico e fios de sustentação PDO para um contorno perfeito e jovem.</p>
+          <a href="#" class="btn-small">Saber Mais</a>
+        </div>
+        <div class="proc-card" style="background: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;">
+          <h3>Limpeza de Pele 3D</h3>
+          <p>Protocolo exclusivo com renovação celular profunda, extração a vácuo indolor, fototerapia LED e máscara finalizadora de ouro 24k.</p>
+          <a href="#" class="btn-small">Saber Mais</a>
+        </div>
+        <div class="proc-card" style="background: url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;">
+          <h3>Lipo sem Cortes (Ultra)</h3>
+          <p>Redução drástica de medidas, celulite e flacidez corporal usando a combinação de ultrassom microfocado, criofrequência e enzimas.</p>
+          <a href="#" class="btn-small">Saber Mais</a>
+        </div>
+        <div class="proc-card" style="background: url('https://images.unsplash.com/photo-1629367302484-9d107a414cb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;">
+          <h3>Peeling & Laser Lavieen</h3>
+          <p>Efeito "BB Cream" prolongado. Tratamento definitivo para melasma, poros dilatados, cicatrizes de acne e renovação intensa do brilho da pele.</p>
+          <a href="#" class="btn-small">Saber Mais</a>
+        </div>
+        <div class="proc-card" style="background: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;">
+          <h3>Massagem Relaxante</h3>
+          <p>Sessão de 60 minutos de massagem com óleos essenciais aquecidos, pedras quentes e ambiente preparado para zerar o seu stress.</p>
+          <a href="#" class="btn-small">Saber Mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #09090b;">
+    <div class="container grid-2" style="align-items: flex-start;">
+      <div>
+        <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Dúvidas Frequentes</h2>
+        <p style="color: #a1a1aa; margin-bottom: 40px;">Tudo o que você precisa saber antes de agendar o seu momento Glow.</p>
+        <a href="#" class="btn btn-main"><i class="fa-brands fa-whatsapp"></i> Falar com a Recepção</a>
+      </div>
+      <div>
+        <div class="faq-item">
+          <div class="faq-question">Os procedimentos faciais doem? <i class="fa-solid fa-plus" style="color: var(--brand);"></i></div>
+          <div class="faq-answer">Utilizamos anestésicos tópicos de altíssima qualidade (padrão ouro) e técnicas com cânulas que minimizam ou anulam completamente a dor e o desconforto durante procedimentos como preenchimentos e botox.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">A consulta de avaliação é cobrada? <i class="fa-solid fa-plus" style="color: var(--brand);"></i></div>
+          <!-- Answer hidden for layout purposes, visual only -->
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Em quanto tempo vejo os resultados do Botox? <i class="fa-solid fa-plus" style="color: var(--brand);"></i></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Posso parcelar meus pacotes de tratamentos? <i class="fa-solid fa-plus" style="color: var(--brand);"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="demo-footer">
+  <div class="container demo-footer-grid">
+    <div>
+      <h4 style="font-family: 'Space Grotesk', sans-serif;">VORTEX</h4>
+      <p>Este é um site de demonstração de alta performance criado pela Vortex. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="#">Sobre o Modelo</a></li>
+        <li><a href="#">Diferenciais</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Suporte VIP</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> (66) 99937-3778</li>
+        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@vortex.com</li>
+        <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Atendimento Global</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-footer-bottom">
+    <p>&copy; 2026 Vortex Web. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="assets/js/demos.js"></script>
+</body>
+
+</html>

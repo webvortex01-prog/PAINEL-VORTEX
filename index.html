@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex | Websites Imersivos e Interfaces de Alta Performance</title>
+  
+  <meta name="description" content="A Vortex projeta e desenvolve websites de qualidade visual, performance otimizada e navegação intuitiva focadas em ajudar no seu crescimento.">
+  <meta name="keywords" content="vortex, desenvolvimento web, site responsivo, web design, performance, seo, agência de tecnologia">
+  <meta name="author" content="Vortex Digital">
+  
+  <!-- Favicon Mockup -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='40' fill='%2300f2fe'/%3E%3C/svg%3E">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  
+  <!-- FontAwesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Scripts (Deferred) -->
+  <script src="assets/js/calculator.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+
+  <style>
+    @keyframes cyberGlow {
+      0% { text-shadow: 0 0 10px rgba(0, 242, 254, 0.8), 0 0 20px rgba(0, 242, 254, 0.6); color: #ffffff; }
+      50% { text-shadow: 0 0 20px rgba(79, 172, 254, 1), 0 0 30px rgba(79, 172, 254, 0.8), 0 0 40px rgba(79, 172, 254, 0.6); color: #00f2fe; }
+      100% { text-shadow: 0 0 10px rgba(0, 242, 254, 0.8), 0 0 20px rgba(0, 242, 254, 0.6); color: #ffffff; }
+    }
+    .cyber-text {
+      animation: cyberGlow 2.5s infinite alternate ease-in-out;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+
+  <!-- Header Navigation -->
+  <header id="main-header">
+    <div class="container">
+      <a href="#" class="logo" id="header-logo" style="display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-hurricane" style="color: var(--primary); font-size: 2rem; text-shadow: 0 0 15px var(--primary);"></i>
+        VORTEX
+      </a>
+      
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#inicio" id="link-inicio">Início</a></li>
+          <li><a href="#pilares" id="link-pilares">Pilares</a></li>
+          <li><a href="#portfolio" id="link-portfolio">Portfólio</a></li>
+          <li><a href="modelos.html" id="link-modelos" style="color: var(--primary); font-weight: bold;"><i class="fa-solid fa-layer-group"></i> Ver Modelos</a></li>
+          <li><a href="#sistemas-ceo" id="link-paineis" style="color: var(--secondary); font-weight: bold;"><i class="fa-solid fa-lock"></i> Sistemas CEO</a></li>
+          <li><a href="#orcamento" id="link-orcamento">Simulador</a></li>
+          <li><a href="#contato" id="link-contato">Contato</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="#contato" class="btn btn-primary" id="header-cta-btn">Iniciar Projeto</a>
+        
+        <!-- Hamburger Menu for Mobile -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Hero Section -->
+    <section class="hero" id="inicio" style="background: url('https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat; position: relative;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 20%, rgba(15, 23, 42, 0.6) 100%); z-index: 0;"></div>
+      <div class="container" style="position: relative; z-index: 1;">
+        <div class="hero-grid">
+          
+          <div class="hero-content reveal">
+            <div class="hero-badge">
+              <span></span> Chegou a Web Vortex
+            </div>
+            <h1 class="hero-title">
+              Nós somos a <span class="cyber-text">Web Vortex</span>.<br>A elite do desenvolvimento digital.
+            </h1>
+            <p class="hero-desc">
+              Somos uma empresa nova no mercado focada em oferecer <strong>orçamento justo e parceiro</strong> para quem quer crescer junto com a gente. E para celebrar nossa abertura, quem ganha o presente é você!
+            </p>
+            <div class="promo-box" style="margin: 1.5rem 0; padding: 1.2rem; border-radius: 12px; background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.2);">
+              <h4 style="color: #00f2fe; margin-bottom: 0.5rem; font-size: 1.1rem;"><i class="fa-solid fa-gift"></i> Vantagem de Abertura Web Vortex</h4>
+              <p style="font-size: 0.95rem; line-height: 1.5;">Os <strong>10 primeiros clientes</strong> ganham <strong>1 ANO de Hospedagem</strong> e <strong>1 ANO de Domínio</strong> totalmente por nossa conta!</p>
+            </div>
+            <div class="hero-actions">
+              <a href="#orcamento" class="btn btn-primary btn-glow" id="hero-btn-calc">Fazer Orçamento Justo <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="#portfolio" class="btn btn-secondary" id="hero-btn-port">Ver Projetos</a>
+            </div>
+          </div>
+          
+          <!-- Interactive Widget: Launch Special -->
+          <div class="hero-widget-container reveal delay-200">
+            <div class="performance-widget">
+              <div class="widget-title">Bônus Exclusivo</div>
+              <div class="gauge-container" style="display: flex; align-items: center; justify-content: center; height: 140px; width: 100%; margin: 1rem 0; gap: 20px;">
+                <div style="font-size: 3.5rem; color: #00f2fe; text-shadow: 0 0 20px rgba(0, 242, 254, 0.5); display: flex; flex-direction: column; align-items: center;">
+                  <i class="fa-solid fa-rocket"></i>
+                </div>
+                <div style="font-size: 2rem; color: rgba(255,255,255,0.3); font-weight: bold;">+</div>
+                <div style="font-size: 3.5rem; color: #00f2fe; text-shadow: 0 0 20px rgba(0, 242, 254, 0.5); display: flex; flex-direction: column; align-items: center;">
+                  <i class="fa-solid fa-globe"></i>
+                  <span style="font-size: 0.9rem; font-weight: 800; font-family: 'Inter', sans-serif; margin-top: -5px; letter-spacing: 2px;">WWW</span>
+                </div>
+              </div>
+              <div class="widget-stats">
+                <div class="stat-item">
+                  <div class="stat-val" style="font-size: 1.2rem; color: #fff;"><i class="fa-solid fa-rocket" style="color: var(--primary); margin-right: 5px;"></i> 1 Ano</div>
+                  <div class="stat-lbl">Hospedagem Grátis</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-val" style="font-size: 1.2rem; color: #fff;"><i class="fa-solid fa-globe" style="color: var(--primary); margin-right: 5px;"></i> 1 Ano</div>
+                  <div class="stat-lbl">Domínio Grátis</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Pilares da Agência -->
+    <section class="features-section" id="pilares">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-label">Nossa Abordagem</span>
+          <h2 class="section-title">Performance, Design Premium e Qualidade Absoluta</h2>
+          <p class="section-desc">Entregamos a tecnologia mais avançada do mercado. Nossas interfaces são projetadas para impressionar, gerar autoridade e converter visitantes em clientes no primeiro segundo.</p>
+        </div>
+        
+        <div class="features-grid">
+          
+          <div class="feature-card reveal delay-100">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <h3>Design Premium Imersivo</h3>
+            <p>Desenvolvemos interfaces visuais de tirar o fôlego, com animações de ponta e um design moderno que eleva o nível da sua marca para a elite do mercado.</p>
+          </div>
+          
+          <div class="feature-card reveal delay-200">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h3>Velocidade Incomparável</h3>
+            <p>Esqueça sites lentos e genéricos. Nossas estruturas são ultra-otimizadas com a tecnologia mais moderna para carregar instantaneamente, garantindo a melhor performance.</p>
+          </div>
+          
+          <div class="feature-card reveal delay-300">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-crosshairs"></i>
+            </div>
+            <h3>Máquina de Conversão</h3>
+            <p>Cada botão, cada cor e cada fluxo é milimetricamente projetado usando psicologia de consumo avançada para gerar o máximo de conversão possível e multiplicar as suas vendas.</p>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Section 3: Lab / Insights sobre a Performance -->
+    <section class="lab-section">
+      <div class="container">
+        <div class="lab-layout">
+          
+          <div class="lab-visual reveal">
+            <!-- Simulated Performance Chart SVG -->
+            <svg viewBox="0 0 400 250" class="performance-chart">
+              <defs>
+                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(0, 242, 254, 0.4)"></stop>
+                  <stop offset="100%" stop-color="rgba(0, 242, 254, 0.0)"></stop>
+                </linearGradient>
+              </defs>
+              <!-- Chart axes -->
+              <line x1="40" y1="20" x2="40" y2="220" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+              <line x1="40" y1="220" x2="380" y2="220" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+              
+              <!-- Grid lines -->
+              <line x1="40" y1="120" x2="380" y2="120" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4" />
+              <line x1="40" y1="70" x2="380" y2="70" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4" />
+              
+              <!-- Vortex Speed Curve (Cyan) -->
+              <path d="M 40,220 C 100,180 180,80 360,30 L 360,220 Z" fill="url(#chartGrad)" />
+              <path d="M 40,220 C 100,180 180,80 360,30" fill="none" stroke="var(--primary)" stroke-width="4" stroke-linecap="round" />
+              
+              <!-- Normal Speed Curve (Red/Grey) -->
+              <path d="M 40,220 C 100,210 200,200 360,160" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2.5" />
+              
+              <!-- Labels -->
+              <text x="50" y="240" fill="var(--text-dark)" font-size="10">Entrada</text>
+              <text x="340" y="240" fill="var(--text-dark)" font-size="10">Conversão</text>
+              <text x="140" y="240" fill="var(--text-dark)" font-size="10">Interação</text>
+              <text x="240" y="60" fill="var(--primary)" font-weight="bold" font-size="12">Vortex Speed +300%</text>
+            </svg>
+          </div>
+          
+          <div class="lab-text reveal delay-200">
+            <span class="section-label">Nossos Diferenciais</span>
+            <h2 class="section-title">Desempenho e Qualidade</h2>
+            <p class="hero-desc" style="margin-bottom: 1.5rem;">
+              Um site bem estruturado e veloz ajuda a reter visitantes e melhora a experiência de navegação, sendo fundamental para gerar confiança em novos clientes.
+            </p>
+            <p class="hero-desc" style="font-size: 1rem;">
+              Utilizamos boas práticas de desenvolvimento e recursos modernos para garantir que seu site funcione de forma fluida e cumpra o seu papel no seu negócio.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Portfólio Interativo -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-label">Modelos de Exemplo</span>
+          <h2 class="section-title">Nossos Projetos</h2>
+          <p class="section-desc" style="margin-bottom: 20px;">
+            Apresentamos abaixo algumas amostras básicas de estruturas que podemos desenvolver. 
+          </p>
+          <div style="background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.2); padding: 20px; border-radius: 8px; max-width: 800px; margin: 0 auto; text-align: left; font-size: 0.95rem; line-height: 1.6;">
+            <strong style="color: var(--primary);"><i class="fa-solid fa-circle-info"></i> Importante:</strong> Estes são apenas exemplos conceituais de demonstração. Cada cliente possui necessidades únicas e, para garantir a melhor experiência e resultados, construímos <strong>projetos 100% sob medida</strong>. Para visualizar uma solução desenhada exclusivamente para a sua empresa, por favor, <a href="#contato" style="color: var(--primary); text-decoration: underline; font-weight: bold;">entre em contato e solicite o seu orçamento personalizado</a>.
+          </div>
+        </div>
+        
+        <!-- Grid of Project Cards with 3D Tilt -->
+        <div class="portfolio-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+          
+          <!-- Card 0: Tattoo -->
+          <div class="portfolio-card-wrap reveal delay-100">
+            <a href="demo-tattoo.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="assets/img/demos/tattoo.png" alt="Exemplo de Tatuagem" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Estúdio Tattoo</h4>
+                  <p class="portfolio-card-desc">Serviços de Tatuagem</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Card 1 -->
+          <div class="portfolio-card-wrap reveal delay-100">
+            <a href="demo-grelha.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="assets/img/demos/grelha.png" alt="Smash Burger" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Delivery</h4>
+                  <p class="portfolio-card-desc">Smash Burger Delivery</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="portfolio-card-wrap reveal delay-200">
+            <a href="demo-fade.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="assets/img/demos/fade.png" alt="Fade Pro" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Barbearia</h4>
+                  <p class="portfolio-card-desc">Barbearia Premium</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="portfolio-card-wrap reveal delay-300">
+            <a href="demo-lex.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="assets/img/demos/lex.png" alt="Lex Advocacia" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Advocacia</h4>
+                  <p class="portfolio-card-desc">Direito Empresarial e Tributário</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="portfolio-card-wrap reveal delay-100">
+            <a href="demo-sorriso.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="assets/img/demos/sorriso.png" alt="Sorriso Prime" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Odontologia</h4>
+                  <p class="portfolio-card-desc">Odontologia Avançada</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="portfolio-card-wrap reveal delay-200">
+            <a href="demo-glow.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="assets/img/demos/glow.png" alt="Glow Clínica" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Estética</h4>
+                  <p class="portfolio-card-desc">Estética de Alto Padrão</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="portfolio-card-wrap reveal delay-300">
+            <a href="demo-iron.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="assets/img/demos/iron.png" alt="Iron Box" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Academia</h4>
+                  <p class="portfolio-card-desc">Crossfit & Performance</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="portfolio-card-wrap reveal delay-100">
+            <a href="demo-imob.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="assets/img/demos/imob.png" alt="Imob Premium" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Imobiliária</h4>
+                  <p class="portfolio-card-desc">Inteligência Imobiliária</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="portfolio-card-wrap reveal delay-200">
+            <a href="demo-garage.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="assets/img/demos/garage.png" alt="Garage Oficina" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Oficina</h4>
+                  <p class="portfolio-card-desc">Oficina Premium & Estética</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="portfolio-card-wrap reveal delay-300">
+            <a href="demo-hype.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="assets/img/demos/hype.png" alt="Hype Streetwear" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Loja Virtual</h4>
+                  <p class="portfolio-card-desc">E-commerce de Moda</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="portfolio-card-wrap reveal delay-100">
+            <a href="demo-conversao.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card">
+              <div class="portfolio-img-container">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Conversão Máxima" class="portfolio-img" style="width: 100%; height: 250px; object-fit: cover;">
+              </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-card-info">
+                  <h4>Exemplo de Landing Page</h4>
+                  <p class="portfolio-card-desc">Página de Lançamento / VSL</p>
+                  <span style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 10px; display: inline-block;">Ver Demonstração &rarr;</span>
+                </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Section 4.5: Painéis do CEO -->
+    <section class="portfolio-section" id="sistemas-ceo" style="background: rgba(3,3,8,0.5); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-label" style="color: var(--secondary);">Integração Exclusiva</span>
+          <h2 class="section-title">Sistemas de Gestão (CEO)</h2>
+          <p class="section-desc" style="margin-bottom: 30px;">
+            Muito além de sites, entregamos a verdadeira inteligência por trás do seu negócio. Um Painel do CEO <strong>100% sob medida</strong> permite que você controle vendas, agenda, estoque e equipe em um único lugar, desenvolvido exclusivamente para o modo como a sua empresa opera. Diga adeus aos sistemas engessados.
+          </p>
+          
+          <div style="display: flex; gap: 20px; margin-bottom: 40px; justify-content: center; flex-wrap: wrap;">
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 50px; display: flex; align-items: center; gap: 10px;">
+              <i class="fa-solid fa-cogs" style="color: var(--secondary);"></i> <span>Operação Automatizada</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 50px; display: flex; align-items: center; gap: 10px;">
+              <i class="fa-solid fa-chart-line" style="color: var(--secondary);"></i> <span>Dados em Tempo Real</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 50px; display: flex; align-items: center; gap: 10px;">
+              <i class="fa-solid fa-code" style="color: var(--secondary);"></i> <span>Desenvolvimento Sob Medida</span>
+            </div>
+          </div>
+          
+          <div style="background: rgba(217, 70, 239, 0.05); border: 1px solid rgba(217, 70, 239, 0.2); padding: 20px; border-radius: 8px; max-width: 800px; margin: 0 auto; text-align: left; font-size: 0.95rem; line-height: 1.6;">
+            <strong style="color: var(--secondary);"><i class="fa-solid fa-triangle-exclamation"></i> Importante:</strong> Estes são apenas modelos exemplares e conceituais de demonstração, desenvolvidos para ilustrar como o seu negócio poderia ser gerenciado internamente com a tecnologia Web Vortex.
+          </div>
+        </div>
+        
+        <div class="portfolio-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+          
+          <!-- Panel 1 -->
+          <div class="portfolio-card-wrap reveal delay-100">
+            <a href="panel-tattoo.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card" style="border: 1px solid rgba(217,70,239,0.3);">
+              <div class="portfolio-img-container" style="height: 100%;">
+                <div style="width: 100%; height: 100%; background: url('assets/img/demos/tattoo.png') center/cover; filter: grayscale(50%); display:flex; align-items:center; justify-content:center; position:relative; padding-bottom: 80px;">
+                  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.7);"></div>
+                  <i class="fa-solid fa-lock" style="font-size: 3rem; color: #fff; z-index: 2;"></i>
+                </div>
+              </div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: rgba(10,10,10,0.95); text-align: center; border-top: 1px solid rgba(217,70,239,0.3); z-index: 10;">
+                <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 5px;">Painel Ink Master</h4>
+                <p style="color: #d946ef; font-size: 0.9rem; font-weight: bold;">Estúdio de Tattoo <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></p>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Panel 2 -->
+          <div class="portfolio-card-wrap reveal delay-200">
+            <a href="panel-grelha.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card" style="border: 1px solid rgba(239,68,68,0.3);">
+              <div class="portfolio-img-container" style="height: 100%;">
+                <div style="width: 100%; height: 100%; background: url('assets/img/demos/grelha.png') center/cover; filter: grayscale(50%); display:flex; align-items:center; justify-content:center; position:relative; padding-bottom: 80px;">
+                  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.7);"></div>
+                  <i class="fa-solid fa-lock" style="font-size: 3rem; color: #fff; z-index: 2;"></i>
+                </div>
+              </div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: rgba(10,10,10,0.95); text-align: center; border-top: 1px solid rgba(239,68,68,0.3); z-index: 10;">
+                <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 5px;">Painel Burger Pro</h4>
+                <p style="color: #ef4444; font-size: 0.9rem; font-weight: bold;">Delivery e PDV <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></p>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <!-- Panel 3 -->
+          <div class="portfolio-card-wrap reveal delay-300">
+            <a href="panel-glow.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="portfolio-card" style="border: 1px solid rgba(219,39,119,0.3);">
+              <div class="portfolio-img-container" style="height: 100%;">
+                <div style="width: 100%; height: 100%; background: url('assets/img/demos/glow.png') center/cover; filter: grayscale(50%); display:flex; align-items:center; justify-content:center; position:relative; padding-bottom: 80px;">
+                  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.7);"></div>
+                  <i class="fa-solid fa-lock" style="font-size: 3rem; color: #fff; z-index: 2;"></i>
+                </div>
+              </div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: rgba(10,10,10,0.95); text-align: center; border-top: 1px solid rgba(219,39,119,0.3); z-index: 10;">
+                <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 5px;">Painel Glow</h4>
+                <p style="color: #db2777; font-size: 0.9rem; font-weight: bold;">Clínica de Estética <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></p>
+              </div>
+            </div>
+            </a>
+          </div>
+
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Section 5: Calculadora de Orçamento Interativa -->
+    <section class="calc-section" id="orcamento">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-label">Simulador de Projeto</span>
+          <h2 class="section-title">Configure e Calcule seu Website</h2>
+          <p class="section-desc">Monte o site dos seus sonhos no simulador e veja em tempo real a estimativa de investimento e retorno esperado.</p>
+        </div>
+        
+        <div class="calc-grid">
+          
+          <!-- Input settings -->
+          <div class="calc-form-container reveal">
+            
+            <!-- Step 1: Quantidade de Páginas -->
+            <div class="calc-group">
+              <div class="calc-group-title">
+                Quantidade de Páginas/Seções
+                <span class="calc-group-value" id="calc-pages-val">1</span>
+              </div>
+              <div class="calc-slider-wrap">
+                <input type="range" class="calc-slider" id="calc-pages" min="1" max="15" value="1">
+              </div>
+            </div>
+            
+            <!-- Step 2: Tipo de Projeto -->
+            <div class="calc-group">
+              <div class="calc-group-title">Tipo de Projeto</div>
+              <div class="calc-options-grid" style="grid-template-columns: 1fr;">
+                <button class="calc-option-btn selected" data-type="page">
+                  <span class="calc-option-name">Página para Clientes (One Page)</span>
+                  <span class="calc-option-desc">Site focado em atrair clientes. A partir de R$ 180.</span>
+                </button>
+                <button class="calc-option-btn" data-type="panel">
+                  <span class="calc-option-name">Painel para Administração</span>
+                  <span class="calc-option-desc">Sistema de agendamento e gestão para o CEO.</span>
+                </button>
+                <button class="calc-option-btn" data-type="both">
+                  <span class="calc-option-name" style="color: var(--primary);"><i class="fa-solid fa-star"></i> Combo: Página + Painel</span>
+                  <span class="calc-option-desc">O pacote completo: atração de clientes e gestão interna.</span>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Step 3: Extra Features -->
+            <div class="calc-group" style="margin-bottom: 0;">
+              <div class="calc-group-title">Funcionalidades Adicionais</div>
+              <div class="calc-check-grid" style="grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div class="calc-check-item" data-feature="Sistema de Pagamentos (Pix, Cartão)" data-price="350">
+                  <div class="checkbox-custom"></div>
+                  <span class="calc-check-label">Sistema de Pagamentos (Pix/Cartão)</span>
+                </div>
+                <div class="calc-check-item" data-feature="Dashboard de Métricas" data-price="400">
+                  <div class="checkbox-custom"></div>
+                  <span class="calc-check-label">Dashboard Administrativo</span>
+                </div>
+                <div class="calc-check-item" data-feature="Gestão de Estoque Completa" data-price="450">
+                  <div class="checkbox-custom"></div>
+                  <span class="calc-check-label">Gestão de Estoque Avançada</span>
+                </div>
+                <div class="calc-check-item" data-feature="Agendamento Inteligente" data-price="300">
+                  <div class="checkbox-custom"></div>
+                  <span class="calc-check-label">Agendamento Inteligente</span>
+                </div>
+                <div class="calc-check-item" data-feature="Portal do Cliente" data-price="350">
+                  <div class="checkbox-custom"></div>
+                  <span class="calc-check-label">Portal do Cliente Privado</span>
+                </div>
+                <div class="calc-check-item" data-feature="Integração CRM / ERP" data-price="500">
+                  <div class="checkbox-custom"></div>
+                  <span class="calc-check-label">Integração CRM / ERP</span>
+                </div>
+                <div class="calc-check-item" data-feature="Automação de E-mails" data-price="250">
+                  <div class="checkbox-custom"></div>
+                  <span class="calc-check-label">Automação de E-mails/SMS</span>
+                </div>
+                <div class="calc-check-item" data-feature="Módulo de Relatórios Fiscais" data-price="200">
+                  <div class="checkbox-custom"></div>
+                  <span class="calc-check-label">Relatórios Fiscais/Financeiros</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- Results board -->
+          <div class="calc-result-panel reveal delay-200">
+            <h3 class="calc-result-title">Estimativa Vortex</h3>
+            <div class="calc-price-row">
+              <span class="calc-price-label">Investimento Previsto</span>
+              <div class="calc-price-value" id="calc-price-display">R$ 2.500</div>
+            </div>
+            <div class="calc-roi-card" style="margin-bottom: 15px;">
+              <h5>Retorno sobre o Investimento</h5>
+              <p id="calc-roi-val"><strong>+120% em Leads</strong> esperado (98/100 Mobile Speed)</p>
+            </div>
+            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+              <input type="text" id="calc-name" class="form-input" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border);" placeholder="Seu Nome" required>
+              <input type="text" id="calc-whatsapp" class="form-input" style="flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border);" placeholder="Seu WhatsApp" required>
+            </div>
+            <button type="button" class="btn btn-primary btn-glow" style="width: 100%; border-radius: 12px; padding: 1.1rem; border: none; cursor: pointer; font-size: 1rem; font-weight: bold; color: white;" id="calc-cta-btn"><i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Enviar Este Orçamento</button>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Section 7: Contact & Briefing Form -->
+    <section class="contact-section" id="contato">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <div class="contact-info reveal">
+            <h2 class="contact-info-title">Vamos crescer juntos?</h2>
+            <p class="contact-info-desc">
+              Aproveite nossa oferta de abertura! Os 10 primeiros clientes levam hospedagem e domínio de graça por 1 ano. Entre em contato e vamos conversar sobre uma parceria com orçamento justo.
+            </p>
+            
+            <div class="contact-channels">
+              <div class="contact-channel">
+                <div class="channel-icon"><i class="fa-brands fa-instagram"></i></div>
+                <div>
+                  <div class="channel-label">Siga nosso Instagram</div>
+                  <a href="#" class="channel-value" target="_blank">@instagram_da_vortex</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Immersive briefing form -->
+          <div class="contact-form-container reveal delay-200">
+            
+            <!-- Contact form wrapper -->
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <input type="text" id="name" class="form-input" placeholder=" " required>
+                <label for="name" class="form-label">Qual seu nome?</label>
+              </div>
+              
+              <div class="form-group">
+                <input type="email" id="email" class="form-input" placeholder=" " required>
+                <label for="email" class="form-label">E-mail de contato</label>
+              </div>
+              
+              <div class="form-group">
+                <input type="text" id="whatsapp" class="form-input" placeholder=" " required>
+                <label for="whatsapp" class="form-label">Seu WhatsApp (com DDD)</label>
+              </div>
+              
+              <div class="form-group">
+                <input type="text" id="company" class="form-input" placeholder=" ">
+                <label for="company" class="form-label">Nome da sua empresa</label>
+              </div>
+              
+              <div class="form-group">
+                <textarea id="message" class="form-input" placeholder=" " required></textarea>
+                <label for="message" class="form-label">Fale um pouco sobre o projeto...</label>
+              </div>
+              
+              <div class="submit-container">
+                <button type="submit" class="btn btn-primary btn-glow" style="border-radius: 12px; width: 100%; padding: 1.1rem;" id="form-submit-btn">Enviar Briefing <i class="fa-solid fa-paper-plane"></i></button>
+              </div>
+            </form>
+            
+            <!-- Success state markup -->
+            <div class="form-success-msg" id="success-message">
+              <div class="form-success-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h3>Mensagem Enviada!</h3>
+              <p style="color: var(--text-muted); margin-top: 10px;">Nossos engenheiros estão analisando suas respostas e entrarão em contato nas próximas 2 horas.</p>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer layout -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h4>VORTEX</h4>
+          <p>Elevando o patamar do desenvolvimento web. Unimos design de vanguarda com engenharia de alto desempenho para transformar cliques em receita.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h5>Navegação</h5>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#pilares">Pilares</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#orcamento">Simulador</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h5>Contato</h5>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            <li><a href="#contato">Solicitar Briefing</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h5>Filosofia</h5>
+          <p style="font-size: 0.85rem; color: var(--text-dark); line-height: 1.6;">
+            Acreditamos que websites estáticos e lentos são dinossauros do marketing digital. O futuro é interativo, responsivo e imersivo.
+          </p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vortex Digital. Todos os direitos reservados. Feito com paixão e código puro.</p>
+        <p style="letter-spacing: 1px;"><i class="fa-solid fa-bolt" style="color: var(--primary);"></i> 99/100 PageSpeed</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Immersive Detailed Project Modal (Backdrop) -->
+  <aside class="modal-backdrop" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Fechar Modal">&times;</button>
+      <div class="modal-body">
+        
+        <!-- Graphic side -->
+        <div class="modal-visual-panel">
+          <div class="modal-img-container">
+            <img src="" alt="Project Preview" id="modal-img">
+          </div>
+          <div>
+            <h3 style="font-family: var(--font-title); font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #fff;">Inovações de Engenharia</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Componentização assíncrona, renderização acelerada por hardware de transições e micro-animações, compactação extrema de imagens e eliminação total de layouts bloqueantes.</p>
+          </div>
+        </div>
+        
+        <!-- Info details side -->
+        <div class="modal-info-panel">
+          <div>
+            <div class="modal-subtitle" id="modal-subtitle">E-commerce Premium</div>
+            <h2 class="modal-meta-title" id="modal-title">Aether Luxury</h2>
+            <p class="modal-desc" id="modal-description">
+              Descrição detalhada do projeto que será injetada dinamicamente via JS.
+            </p>
+          </div>
+          
+          <div class="modal-metric-box">
+            <div class="modal-metric-title">Resultados de Performance</div>
+            <div class="modal-metrics-grid">
+              
+              <div class="modal-metric-item">
+                <span class="modal-metric-value" id="modal-metric1-val">+180%</span>
+                <span class="modal-metric-label" id="modal-metric1-lbl">Conversão de Checkout</span>
+              </div>
+              
+              <div class="modal-metric-item">
+                <span class="modal-metric-value" id="modal-metric2-val">0.35s</span>
+                <span class="modal-metric-label" id="modal-metric2-lbl">Tempo de Resposta</span>
+              </div>
+              
+            </div>
+          </div>
+          
+          <a href="#contato" class="btn btn-primary btn-glow" style="width: 100%; border-radius: 12px;" onclick="document.getElementById('project-modal').classList.remove('open');">Iniciar Projeto Semelhante</a>
+        </div>
+        
+      </div>
+    </div>
+  </aside>
+
+</body>
+</html>

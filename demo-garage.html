@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garage | Oficina Premium</title>
+  <link rel="stylesheet" href="assets/css/demos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --brand: #3b82f6; --brand-glow: rgba(59, 130, 246, 0.4); }
+    body { background: #0f172a; font-family: 'Space Grotesk', sans-serif; }
+    
+    .demo-header { background: rgba(15,23,42,0.9); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(15,23,42,0.6) 0%, rgba(15,23,42,1) 100%),
+                  url('assets/img/demos/garage.png') center/cover no-repeat;
+    }
+    
+    .hero h1 { font-size: 5.5rem; margin-bottom: 20px; line-height: 1;}
+    .hero h1 span { color: var(--brand); text-decoration: none; }
+    .hero p { color: #94a3b8; margin-bottom: 40px; font-size: 1.2rem; font-family: 'Inter', sans-serif; max-width: 600px; line-height: 1.6;}
+    
+    .btn-main { background: var(--brand); color: #fff; border-radius: 4px; font-size: 1.2rem; padding: 18px 36px; font-weight: 700; transition: all 0.3s;}
+    .btn-main:hover { background: #2563eb; box-shadow: 0 0 30px var(--brand-glow); transform: translateY(-2px);}
+    
+    .check-list { display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px; }
+    .check-list-item { display: flex; align-items: center; gap: 15px; font-size: 1.1rem; font-family: 'Inter', sans-serif; color: #cbd5e1; font-weight: 600;}
+    .check-list-item i { color: var(--brand); font-size: 1.5rem; }
+    
+    .brand-logos { display: flex; gap: 30px; opacity: 0.5; margin-top: 60px; filter: grayscale(100%); }
+    .brand-logos i { font-size: 3rem; }
+    
+    /* Services grid */
+    .service-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 8px; text-align: center; transition: all 0.3s;}
+    .service-box:hover { border-color: var(--brand); transform: translateY(-5px); background: rgba(255,255,255,0.05);}
+    .service-box i { font-size: 3rem; color: #94a3b8; margin-bottom: 20px; transition: color 0.3s;}
+    .service-box:hover i { color: var(--brand); }
+    .service-box h3 { font-size: 1.5rem; color: #fff; margin-bottom: 15px;}
+    .service-box p { font-family: 'Inter', sans-serif; color: #94a3b8; font-size: 0.95rem; line-height: 1.5;}
+    
+    /* Pricing quick */
+    .price-row { display: flex; justify-content: space-between; padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); font-family: 'Inter', sans-serif;}
+    .price-row:hover { background: rgba(59, 130, 246, 0.05); }
+    .price-title { color: #fff; font-weight: 600; font-size: 1.1rem;}
+    .price-val { color: var(--brand); font-weight: 700; font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem;}
+  </style>
+</head>
+<body>
+  <a href="modelos.html" class="return-vortex"><i class="fa-solid fa-arrow-left"></i> Fechar Demonstração</a>
+  
+  <header class="demo-header">
+    <a href="#" class="demo-logo"><i class="fa-solid fa-car" style="color: var(--brand);"></i> GARAGE</a>
+    <nav class="demo-nav"><a href="#">Serviços Oferecidos</a><a href="#">Valores</a><a href="#">Contato e Local</a></nav>
+    <a href="#" class="btn btn-main" style="padding: 10px 20px; font-size: 13px;">Fazer Orçamento</a>
+  </header>
+  
+  <section class="hero">
+    <div class="container grid-2">
+      <div>
+        <h1>Cuidamos da sua máquina com <span>Extrema Precisão</span>.</h1>
+        <p>A oficina mecânica mais tecnológica da cidade. Diagnóstico computadorizado 3D, mecânica avançada e estética automotiva premium. Entregamos a qualidade de concessionária com a agilidade e o preço justo que você exige.</p>
+        
+        <div class="check-list">
+          <div class="check-list-item"><i class="fa-solid fa-circle-check"></i> Diagnóstico Completo em 40 minutos</div>
+          <div class="check-list-item"><i class="fa-solid fa-circle-check"></i> Peças 100% Originais com Garantia de 1 Ano</div>
+          <div class="check-list-item"><i class="fa-solid fa-circle-check"></i> Serviço de Leva e Traz com Seguro Total</div>
+        </div>
+        
+        <div style="display: flex; gap: 20px; align-items: center;">
+          <a href="#" class="btn btn-main"><i class="fa-brands fa-whatsapp"></i> Agendar Revisão Agora</a>
+          <div style="color: #cbd5e1; font-family: 'Inter', sans-serif; font-size: 0.9rem;">
+            <i class="fa-solid fa-star" style="color:#facc15;"></i> 4.9 no Google Reviews
+          </div>
+        </div>
+        
+        <div class="brand-logos">
+          <i class="fa-brands fa-audi"></i>
+          <i class="fa-brands fa-bmw" style="font-family: Arial; font-weight:bold; font-style: italic; font-size: 2.5rem; margin-top:5px;">BMW</i>
+          <i class="fa-brands fa-car-side"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section style="background: #0f172a;">
+    <div class="container">
+      <h2 class="section-title">Especialidades</h2>
+      <div class="grid-3">
+        <div class="service-box">
+          <i class="fa-solid fa-laptop-medical"></i>
+          <h3>Diagnóstico 3D Scanner</h3>
+          <p>Leitura profunda da injeção eletrônica e todos os módulos do veículo para identificar falhas ocultas com 100% de precisão.</p>
+        </div>
+        <div class="service-box">
+          <i class="fa-solid fa-gears"></i>
+          <h3>Transmissão Automática</h3>
+          <p>Troca de óleo por diálise e manutenção completa preventiva e corretiva de câmbios CVT, DSG e tradicionais.</p>
+        </div>
+        <div class="service-box">
+          <i class="fa-solid fa-oil-can"></i>
+          <h3>Revisão Preventiva</h3>
+          <p>Check-up de 60 itens. Troca de óleo, filtros, correias e fluidos seguindo estritamente o manual da montadora.</p>
+        </div>
+        <div class="service-box">
+          <i class="fa-solid fa-snowflake"></i>
+          <h3>Ar Condicionado</h3>
+          <p>Higienização com ozônio, recarga de gás, detecção de vazamentos por contraste e conserto de compressores.</p>
+        </div>
+        <div class="service-box">
+          <i class="fa-solid fa-car-burst"></i>
+          <h3>Suspensão e Freios</h3>
+          <p>Substituição de pastilhas, discos, amortecedores e buchas. Alinhamento 3D e balanceamento computadorizado.</p>
+        </div>
+        <div class="service-box">
+          <i class="fa-solid fa-spray-can-sparkles"></i>
+          <h3>Estética Automotiva</h3>
+          <p>Polimento técnico, vitrificação de pintura, higienização interna profunda e hidratação de bancos de couro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section style="background: #1e293b;">
+    <div class="container grid-2" style="align-items: center;">
+      <div>
+        <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Transparência Total</h2>
+        <p style="color: #94a3b8; font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">Na Garage, você não tem surpresas. Nós enviamos vídeos e fotos no WhatsApp mostrando exatamente a peça que precisa ser trocada e o porquê.</p>
+        <a href="#" class="btn btn-main" style="background: transparent; border: 2px solid var(--brand); color: #fff;">Falar com Mecânico Chefe</a>
+      </div>
+      
+      <div style="background: rgba(15,23,42,0.5); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+        <h3 style="color: #fff; margin-bottom: 20px; text-align: center;">Tabela Rápida (A partir de)</h3>
+        <div class="price-row">
+          <div class="price-title">Alinhamento 3D + Balanceamento</div>
+          <div class="price-val">R$ 120</div>
+        </div>
+        <div class="price-row">
+          <div class="price-title">Troca de Óleo (10W40 Sintético)</div>
+          <div class="price-val">R$ 180</div>
+        </div>
+        <div class="price-row">
+          <div class="price-title">Higienização de Ar + Filtro</div>
+          <div class="price-val">R$ 150</div>
+        </div>
+        <div class="price-row">
+          <div class="price-title">Diagnóstico Scanner Avançado</div>
+          <div class="price-val">R$ 200</div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+          <p style="color: #64748b; font-family: 'Inter', sans-serif; font-size: 0.8rem;">*Os valores variam conforme o modelo e montadora do veículo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="demo-footer">
+  <div class="container demo-footer-grid">
+    <div>
+      <h4 style="font-family: 'Space Grotesk', sans-serif;">VORTEX</h4>
+      <p>Este é um site de demonstração de alta performance criado pela Vortex. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="#">Sobre o Modelo</a></li>
+        <li><a href="#">Diferenciais</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Suporte VIP</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> (66) 99937-3778</li>
+        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@vortex.com</li>
+        <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Atendimento Global</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-footer-bottom">
+    <p>&copy; 2026 Vortex Web. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="assets/js/demos.js"></script>
+</body>
+
+</html>

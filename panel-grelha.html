@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do CEO - Burger Pro</title>
+  <link rel="stylesheet" href="assets/css/panel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { 
+      --brand: #ef4444; 
+      --bg-color: #f1f5f9;
+      --sidebar-bg: #1e293b;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --text-color: #0f172a;
+    }
+    body { background: var(--bg-color); color: var(--text-color); font-family: 'Inter', sans-serif; font-size: 1.05rem; }
+    
+    /* Vibrant POS Overrides */
+    .sidebar { background: var(--sidebar-bg); color: #fff; }
+    .sidebar-header { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .nav-links a { color: #94a3b8; font-weight: 500; }
+    .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.1); color: #fff; border-radius: 12px; border:none; }
+    .nav-links a.active { background: var(--brand); box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3); }
+    
+    .topbar { background: var(--card-bg); border-bottom: 1px solid var(--border-color); color: var(--text-color); }
+    .topbar-title { color: var(--text-color); font-weight: 700; font-size: 1.2rem; }
+    .notification-btn { color: #64748b; }
+    
+    .stat-card { 
+      background: var(--card-bg); 
+      border: 1px solid var(--border-color); 
+      border-radius: 16px; 
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+    }
+    .stat-info h3 { color: #64748b; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.5px;}
+    .stat-info .value { color: var(--text-color); }
+    .stat-icon { background: rgba(239, 68, 68, 0.1); border-radius: 50%; }
+    
+    .panel-section { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .panel-section-title { color: var(--text-color); }
+    
+    .btn-primary { background: var(--brand); color: #fff; border-radius: 50px; padding: 10px 20px; font-weight: 700; box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3); }
+    .btn-primary:hover { background: #dc2626; transform: translateY(-2px); }
+    
+    .data-table th { color: #64748b; border-bottom: 2px solid var(--border-color); font-weight: 700; }
+    .data-table td { color: var(--text-color); border-bottom: 1px solid var(--border-color); font-weight: 500;}
+    
+    /* Kanban Specific Overrides */
+    #view-pedidos > .panel-section > div > div {
+      background: #f8fafc !important;
+      border: 1px solid var(--border-color);
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+    }
+    #view-pedidos > .panel-section > div > div > div {
+      background: #fff !important;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      color: var(--text-color);
+      font-weight: 600;
+      border-left: 4px solid var(--brand);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <i class="fa-solid fa-fire-burner"></i> Burger Pro CEO
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" data-target="view-dashboard" class="active"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+      <li><a href="#" data-target="view-pedidos"><i class="fa-solid fa-motorcycle"></i> Gestão de Pedidos</a></li>
+      <li><a href="#" data-target="view-cardapio"><i class="fa-solid fa-burger"></i> Cardápio</a></li>
+      <li><a href="#" data-target="view-estoque"><i class="fa-solid fa-boxes-stacked"></i> Estoque</a></li>
+      <li><a href="#" data-target="view-financeiro"><i class="fa-solid fa-file-invoice-dollar"></i> Financeiro</a></li>
+      <li><a href="#" data-target="view-config"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="demo-grelha.html" class="return-store"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="topbar-title">Controle de Operação Diária</div>
+      <div class="topbar-actions">
+        <button class="notification-btn">
+          <i class="fa-regular fa-bell"></i>
+          <span class="badge">5</span>
+        </button>
+        <div class="user-profile">
+          <div class="avatar">C</div>
+          <div style="font-size: 0.85rem; color: #8f9bb3;">CEO Admin</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Body -->
+    <div class="dashboard-container">
+      
+      <!-- VIEW: DASHBOARD -->
+      <div id="view-dashboard" class="dashboard-view active">
+        <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div class="stat-info">
+            <h3>Pedidos Hoje</h3>
+            <div class="value">42</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-wallet"></i></div>
+          <div class="stat-info">
+            <h3>Faturamento Hoje</h3>
+            <div class="value">R$ 1.850 <span class="trend up"><i class="fa-solid fa-arrow-up"></i> 8%</span></div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="stat-info">
+            <h3>Prato Mais Vendido</h3>
+            <div class="value" style="font-size: 1.1rem; line-height: 1.5rem; margin-top: 5px;">Combo Smash<br>Duplo</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Data Table -->
+      <div class="panel-section">
+        <div class="panel-section-header">
+          <h2 class="panel-section-title">Pedidos em Andamento (Tempo Real)</h2>
+          <button class="btn-primary"><i class="fa-solid fa-pause"></i> Pausar Delivery</button>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID Pedido</th>
+                <th>Cliente / Endereço</th>
+                <th>Itens</th>
+                <th>Valor Total</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#1042</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">19:45</span></td>
+                <td><strong>Carlos Silva</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">Rua das Flores, 123</span></td>
+                <td>2x Smash Burger<br>1x Fritas M</td>
+                <td>R$ 78,50<br><span style="color: #10b981; font-size: 0.8rem;">Pago no Pix</span></td>
+                <td><span class="status-badge status-pending">Na Chapa</span></td>
+                <td><a href="#" style="color: var(--brand);"><i class="fa-solid fa-ellipsis"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>#1041</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">19:30</span></td>
+                <td><strong>Juliana M.</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">Av. Principal, 500 - Ap 42</span></td>
+                <td>1x Combo Monster</td>
+                <td>R$ 55,00<br><span style="color: #f59e0b; font-size: 0.8rem;">Pagar na Entrega (Cartão)</span></td>
+                <td><span class="status-badge status-info">Em Rota de Entrega</span></td>
+                <td><a href="#" style="color: var(--brand);"><i class="fa-solid fa-ellipsis"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>#1040</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">19:15</span></td>
+                <td><strong>Marcos Paulo</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">Retirar no Balcão</span></td>
+                <td>3x Cheddar Melt</td>
+                <td>R$ 115,00<br><span style="color: #10b981; font-size: 0.8rem;">Pago no Cartão</span></td>
+                <td><span class="status-badge status-success">Concluído</span></td>
+                <td><a href="#" style="color: var(--brand);"><i class="fa-solid fa-ellipsis"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- FIM VIEW: DASHBOARD -->
+
+      <!-- VIEW: PEDIDOS -->
+      <div id="view-pedidos" class="dashboard-view">
+        <div class="panel-section">
+          <div class="panel-section-header">
+            <h2 class="panel-section-title">Kanban de Produção</h2>
+          </div>
+          <div style="display: flex; gap: 20px;">
+            <div style="flex:1; background: rgba(255,255,255,0.02); padding: 15px; border-radius: 8px;">
+              <h3 style="color: #ef4444; margin-bottom: 15px;">Fila de Preparo</h3>
+              <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin-bottom: 10px;">Pedido #1043 - Smash</div>
+              <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin-bottom: 10px;">Pedido #1044 - Fritas</div>
+            </div>
+            <div style="flex:1; background: rgba(255,255,255,0.02); padding: 15px; border-radius: 8px;">
+              <h3 style="color: #f59e0b; margin-bottom: 15px;">Em Rota</h3>
+              <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin-bottom: 10px;">Pedido #1041 - Juliana</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW: CARDAPIO -->
+      <div id="view-cardapio" class="dashboard-view">
+        <div class="panel-section">
+          <h2 class="panel-section-title">Gerenciar Cardápio e Preços</h2>
+          <p style="color: #8f9bb3; margin-top: 10px;">Ative ou desative itens do cardápio em tempo real.</p>
+        </div>
+      </div>
+
+      <!-- VIEW: ESTOQUE -->
+      <div id="view-estoque" class="dashboard-view">
+        <div class="panel-section">
+          <h2 class="panel-section-title">Controle de Estoque Mínimo</h2>
+          <table class="data-table">
+            <thead>
+              <tr><th>Insumo</th><th>Qtd Atual</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Pão Brioche</td><td>12 Unid.</td><td><span class="status-badge status-pending">Comprar</span></td></tr>
+              <tr><td>Carne Angus (Blend)</td><td>5.2 Kg</td><td><span class="status-badge status-success">Normal</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- VIEW: FINANCEIRO & CONFIG -->
+      <div id="view-financeiro" class="dashboard-view">
+        <div class="panel-section"><h2>Fluxo de Caixa Diário</h2></div>
+      </div>
+      <div id="view-config" class="dashboard-view">
+        <div class="panel-section"><h2>Configurações da Loja</h2><p>Horário de funcionamento, frete grátis, taxas.</p></div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="assets/js/panel.js"></script>
+</body>
+</html>

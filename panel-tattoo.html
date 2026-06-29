@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do CEO - Ink Master</title>
+  <link rel="stylesheet" href="assets/css/panel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { 
+      --brand: #d946ef; 
+      --bg-color: #050505;
+      --sidebar-bg: #0a0a0a;
+      --card-bg: #0f0f0f;
+      --border-color: #222;
+      --text-color: #fff;
+    }
+    body { background: var(--bg-color); font-family: 'Space Grotesk', sans-serif; }
+    
+    /* Brutalist Overrides */
+    .sidebar { background: var(--sidebar-bg); border-right: 2px solid var(--border-color); }
+    .topbar { background: var(--bg-color); border-bottom: 2px solid var(--border-color); }
+    .sidebar-header { border-bottom: 2px solid var(--border-color); text-transform: uppercase; letter-spacing: 2px; font-weight: 800;}
+    .nav-links a { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; border-radius: 0; }
+    .nav-links a.active { border-left: 4px solid var(--brand); background: rgba(217, 70, 239, 0.1); }
+    
+    .stat-card, .panel-section { 
+      background: var(--card-bg); 
+      border: 2px solid var(--border-color); 
+      border-radius: 0; 
+      box-shadow: 4px 4px 0 var(--brand); 
+      transition: all 0.2s;
+    }
+    .stat-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--brand); border-color: var(--brand); }
+    
+    .btn-primary { 
+      background: transparent; 
+      border: 2px solid var(--brand); 
+      color: var(--brand); 
+      border-radius: 0; 
+      text-transform: uppercase; 
+      font-weight: 800; 
+      letter-spacing: 1px;
+    }
+    .btn-primary:hover { background: var(--brand); color: #000; }
+    
+    .data-table th { text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; border-bottom: 2px solid var(--border-color); }
+    .data-table td { border-bottom: 1px solid var(--border-color); }
+    .status-badge { border-radius: 0; border: 1px solid currentColor; background: transparent !important; }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <i class="fa-solid fa-skull"></i> Ink Master CEO
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" data-target="view-dashboard" class="active"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+      <li><a href="#" data-target="view-agenda"><i class="fa-solid fa-calendar-check"></i> Agenda / Sessões</a></li>
+      <li><a href="#" data-target="view-clientes"><i class="fa-solid fa-users"></i> Clientes</a></li>
+      <li><a href="#" data-target="view-financeiro"><i class="fa-solid fa-file-invoice-dollar"></i> Financeiro</a></li>
+      <li><a href="#" data-target="view-config"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="demo-tattoo.html" class="return-store"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="topbar-title">Visão Geral do Estúdio</div>
+      <div class="topbar-actions">
+        <button class="notification-btn">
+          <i class="fa-regular fa-bell"></i>
+          <span class="badge">3</span>
+        </button>
+        <div class="user-profile">
+          <div class="avatar">C</div>
+          <div style="font-size: 0.85rem; color: #8f9bb3;">CEO Admin</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Body -->
+    <div class="dashboard-container">
+      
+      <!-- VIEW: DASHBOARD -->
+      <div id="view-dashboard" class="dashboard-view active">
+        <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-calendar-day"></i></div>
+          <div class="stat-info">
+            <h3>Sessões Hoje</h3>
+            <div class="value">4</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-wallet"></i></div>
+          <div class="stat-info">
+            <h3>Sinais Recebidos (Mês)</h3>
+            <div class="value">R$ 3.450 <span class="trend up"><i class="fa-solid fa-arrow-up"></i> 12%</span></div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-user-plus"></i></div>
+          <div class="stat-info">
+            <h3>Novos Orçamentos</h3>
+            <div class="value">18 <span class="trend up"><i class="fa-solid fa-arrow-up"></i> 5%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Data Table -->
+      <div class="panel-section">
+        <div class="panel-section-header">
+          <h2 class="panel-section-title">Próximos Agendamentos</h2>
+          <button class="btn-primary"><i class="fa-solid fa-plus"></i> Novo Agendamento</button>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Estilo</th>
+                <th>Data e Hora</th>
+                <th>Tatuador</th>
+                <th>Status (Sinal)</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Lucas Mendes</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">(11) 99999-1111</span></td>
+                <td>Realismo (Braço)</td>
+                <td>Hoje - 14:00</td>
+                <td>Rafaela Dark</td>
+                <td><span class="status-badge status-success">Sinal Pago 50%</span></td>
+                <td><a href="#" style="color: var(--brand);"><i class="fa-solid fa-ellipsis"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Mariana Costa</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">(11) 98888-2222</span></td>
+                <td>Neo-Traditional</td>
+                <td>Amanhã - 10:00</td>
+                <td>João Ink</td>
+                <td><span class="status-badge status-success">Sinal Pago 30%</span></td>
+                <td><a href="#" style="color: var(--brand);"><i class="fa-solid fa-ellipsis"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Roberto Alves</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">(11) 97777-3333</span></td>
+                <td>Blackwork (Costas)</td>
+                <td>15/Jul - 13:00</td>
+                <td>Rafaela Dark</td>
+                <td><span class="status-badge status-pending">Aguardando Pagamento</span></td>
+                <td><a href="#" style="color: var(--brand);"><i class="fa-solid fa-ellipsis"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- FIM VIEW: DASHBOARD -->
+
+      <!-- VIEW: AGENDA -->
+      <div id="view-agenda" class="dashboard-view">
+        <div class="panel-section">
+          <div class="panel-section-header">
+            <h2 class="panel-section-title">Calendário de Sessões</h2>
+            <button class="btn-primary"><i class="fa-solid fa-plus"></i> Novo Agendamento</button>
+          </div>
+          <p style="color: #8f9bb3; margin-bottom: 20px;">Você não possui novas sessões agendadas para esta semana além das já listadas no Dashboard.</p>
+          <div style="background: rgba(255,255,255,0.02); height: 300px; border-radius: 8px; border: 1px dashed rgba(255,255,255,0.1); display: flex; align-items:center; justify-content: center; color: #8f9bb3;">
+            [ Visualização do Calendário de Tatuadores ]
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW: CLIENTES -->
+      <div id="view-clientes" class="dashboard-view">
+        <div class="panel-section">
+          <div class="panel-section-header">
+            <h2 class="panel-section-title">Base de Clientes</h2>
+            <button class="btn-primary"><i class="fa-solid fa-download"></i> Exportar</button>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr><th>Nome</th><th>Última Sessão</th><th>Total Gasto</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Lucas Mendes</td><td>Hoje</td><td>R$ 1.200</td></tr>
+              <tr><td>Mariana Costa</td><td>Amanhã</td><td>R$ 450</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- VIEW: FINANCEIRO -->
+      <div id="view-financeiro" class="dashboard-view">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+            <div class="stat-info">
+              <h3>Faturamento Mensal</h3>
+              <div class="value">R$ 18.500</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW: CONFIGURACOES -->
+      <div id="view-config" class="dashboard-view">
+        <div class="panel-section">
+          <h2 class="panel-section-title">Configurações do Estúdio</h2>
+          <p style="color: #8f9bb3; margin-top: 10px;">Opções de equipe, horários de funcionamento e taxas de sinais (depósitos).</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="assets/js/panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Pro | Hamburgueria Artesanal</title>
+  <link rel="stylesheet" href="assets/css/demos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --brand: #ef4444; --brand-glow: rgba(239, 68, 68, 0.4); }
+    body { background: #110404; font-family: 'Inter', sans-serif; }
+    
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at center right, rgba(239, 68, 68, 0.15) 0%, transparent 60%);
+      position: relative;
+    }
+    
+    .hero-img {
+      width: 100%;
+      height: 600px;
+      background: url('assets/img/demos/grelha.png') center/cover no-repeat;
+      border-radius: 20px;
+      box-shadow: 0 0 50px rgba(239, 68, 68, 0.2);
+    }
+    
+    .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4.5rem; margin-bottom: 20px; line-height: 1; text-transform: uppercase; font-weight: 800;}
+    .hero h1 span { color: var(--brand); }
+    .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.7); margin-bottom: 40px; max-width: 500px; }
+    
+    .btn-main { background: var(--brand); color: #fff; box-shadow: 0 0 20px var(--brand-glow); border-radius: 50px; font-size: 1.1rem; }
+    .btn-main:hover { background: #dc2626; box-shadow: 0 0 30px var(--brand-glow); transform: translateY(-3px); }
+    
+    .btn-panel { background: #111; border: 1px solid #333; color: #fff; border-radius: 5px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;}
+    .btn-panel:hover { background: #222; color: #fff; border-color: var(--brand); }
+    
+    /* Menu section */
+    .menu-card { background: #1a0808; border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; transition: transform 0.3s;}
+    .menu-card:hover { transform: translateY(-5px); border-color: var(--brand); }
+    .menu-card-img { height: 200px; background: #2a0b0b; border-radius: 12px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; font-size: 50px; color: rgba(239, 68, 68, 0.5); }
+    .menu-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; margin-bottom: 10px; }
+    .menu-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 15px; flex-grow: 1; }
+    .menu-card .price { font-size: 1.5rem; color: var(--brand); font-weight: 700; margin-bottom: 15px; }
+    .menu-card .btn { width: 100%; justify-content: center; background: rgba(239, 68, 68, 0.1); color: var(--brand); }
+    .menu-card .btn:hover { background: var(--brand); color: #fff; }
+    
+    /* Depoimentos */
+    .testimonial { background: rgba(255,255,255,0.03); padding: 30px; border-radius: 12px; border-left: 4px solid var(--brand); }
+    .stars { color: #facc15; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+  
+  <a href="modelos.html" class="return-vortex"><i class="fa-solid fa-arrow-left"></i> Fechar Demonstração</a>
+
+  <header class="demo-header" style="background: rgba(17, 4, 4, 0.9); backdrop-filter: blur(10px);">
+    <a href="#" class="demo-logo"><i class="fa-solid fa-fire-burner" style="color: var(--brand);"></i> Burger Pro</a>
+    <nav class="demo-nav">
+      <a href="#">Combos</a>
+      <a href="#">Burgers</a>
+      <a href="#">Avaliações</a>
+    </nav>
+    <div style="display: flex; gap: 15px;">
+      <a href="panel-grelha.html" class="btn btn-panel" style="padding: 10px 20px; font-size: 12px;"><i class="fa-solid fa-lock"></i> Painel do CEO</a>
+      <a href="#" class="btn btn-main" style="padding: 10px 20px; font-size: 13px;"><i class="fa-brands fa-whatsapp"></i> Fazer Pedido</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container grid-2">
+      <div>
+        <h1>O autêntico <span>Smash Burger</span> na sua porta.</h1>
+        <p>Carne 100% Angus selada Burger Pro no ponto perfeito, pão brioche amanteigado e nosso molho secreto. Esqueça o fast-food. Peça agora e experimente o verdadeiro sabor em até 35 minutos.</p>
+        <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 30px;">
+          <div class="stars" style="margin:0; font-size: 1.2rem;">★★★★★</div>
+          <span style="color: #aaa; font-size: 0.9rem;">+2.000 pedidos avaliados no Ifood</span>
+        </div>
+        <a href="#" class="btn btn-main"><i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Pedir Agora pelo WhatsApp</a>
+      </div>
+      <div>
+        <div class="hero-img"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #160505;">
+    <div class="container">
+      <h2 class="section-title">Cardápio Oficial</h2>
+      <div class="grid-3">
+        <!-- Item 1 -->
+        <div class="menu-card">
+          <div class="menu-card-img" style="background: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+          <h3>Smash Duplo Cheddar</h3>
+          <p>2 carnes smash de 90g, duplo cheddar derretido, cebola caramelizada e maionese da casa no pão brioche.</p>
+          <div class="price">R$ 38,90</div>
+          <a href="#" class="btn"><i class="fa-solid fa-cart-plus"></i> Adicionar</a>
+        </div>
+        <!-- Item 2 -->
+        <div class="menu-card">
+          <div class="menu-card-img" style="background: url('https://images.unsplash.com/photo-1594212202624-7389814b7e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+          <h3>Grelha Bacon Monstro</h3>
+          <p>Hambúrguer de 180g Burger Pro, muito bacon crocante em tiras, queijo prato, alface, tomate e barbecue artesanal.</p>
+          <div class="price">R$ 42,90</div>
+          <a href="#" class="btn"><i class="fa-solid fa-cart-plus"></i> Adicionar</a>
+        </div>
+        <!-- Item 3 -->
+        <div class="menu-card">
+          <div class="menu-card-img" style="background: url('https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+          <h3>Crispy Chicken</h3>
+          <p>Filé de frango empanado super crocante, alface americana, picles e maionese de ervas no pão tradicional.</p>
+          <div class="price">R$ 34,90</div>
+          <a href="#" class="btn"><i class="fa-solid fa-cart-plus"></i> Adicionar</a>
+        </div>
+        <!-- Item 4 -->
+        <div class="menu-card">
+          <div class="menu-card-img" style="background: url('https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+          <h3>Veggie Burger</h3>
+          <p>Hambúrguer de grão de bico e quinoa, queijo prato (ou vegano), rúcula, tomate seco e molho pesto.</p>
+          <div class="price">R$ 36,90</div>
+          <a href="#" class="btn"><i class="fa-solid fa-cart-plus"></i> Adicionar</a>
+        </div>
+        <!-- Item 5 -->
+        <div class="menu-card">
+          <div class="menu-card-img" style="background: url('https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+          <h3>Batata Rústica c/ Cheddar</h3>
+          <p>Porção de 400g de batata rústica frita na hora, coberta com nosso creme de cheddar original e farofa de bacon.</p>
+          <div class="price">R$ 28,90</div>
+          <a href="#" class="btn"><i class="fa-solid fa-cart-plus"></i> Adicionar</a>
+        </div>
+        <!-- Item 6 -->
+        <div class="menu-card">
+          <div class="menu-card-img" style="background: url('https://images.unsplash.com/photo-1621317769919-61bf0004e9fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+          <h3>Combo Casal Faminto</h3>
+          <p>2 Smash Duplo Cheddar + 1 Porção de Fritas Grande + 2 Refrigerantes em Lata. O custo-benefício perfeito.</p>
+          <div class="price">R$ 89,90</div>
+          <a href="#" class="btn"><i class="fa-solid fa-cart-plus"></i> Adicionar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #110404;">
+    <div class="container">
+      <h2 class="section-title">O que dizem os viciados</h2>
+      <div class="grid-3">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Melhor hambúrguer da vida! A carne veio no ponto perfeito, super suculenta, e a entrega chegou em menos de 30 minutos. Virei cliente fiel!"</p>
+          <h4 style="margin-top: 15px; color: var(--brand);">— Marcos T.</h4>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"A batata com cheddar é um espetáculo à parte. Sem miséria no molho! O pão brioche é macio demais. Recomendo de olhos fechados."</p>
+          <h4 style="margin-top: 15px; color: var(--brand);">— Juliana S.</h4>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Sempre peço o Bacon Monstro e nunca decepciona. O bacon é crocante de verdade e o hambúrguer enorme. Atendimento nota 10 no WhatsApp."</p>
+          <h4 style="margin-top: 15px; color: var(--brand);">— Roberto F.</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer style="padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+    <div class="container">
+      <h2 style="font-family: 'Space Grotesk'; font-size: 2rem; margin-bottom: 20px;">Deu Fome?</h2>
+      <a href="#" class="btn btn-main" style="padding: 15px 40px; font-size: 1.3rem;"><i class="fa-brands fa-whatsapp"></i> Fazer Meu Pedido Agora</a>
+    </div>
+  </footer>
+
+
+<footer class="demo-footer">
+  <div class="container demo-footer-grid">
+    <div>
+      <h4 style="font-family: 'Space Grotesk', sans-serif;">VORTEX</h4>
+      <p>Este é um site de demonstração de alta performance criado pela Vortex. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="#">Sobre o Modelo</a></li>
+        <li><a href="#">Diferenciais</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Suporte VIP</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> (66) 99937-3778</li>
+        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@vortex.com</li>
+        <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Atendimento Global</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-footer-bottom">
+    <p>&copy; 2026 Vortex Web. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="assets/js/demos.js"></script>
+</body>
+
+</html>

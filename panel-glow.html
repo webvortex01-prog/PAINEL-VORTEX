@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do CEO - Glow Estética</title>
+  <link rel="stylesheet" href="assets/css/panel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { 
+      --brand: #db2777; 
+      --bg-color: #fafafa;
+      --sidebar-bg: rgba(255, 255, 255, 0.7);
+      --card-bg: rgba(255, 255, 255, 0.6);
+      --border-color: rgba(219, 39, 119, 0.1);
+      --text-color: #334155;
+    }
+    body { 
+      background: var(--bg-color); 
+      background-image: radial-gradient(circle at top right, rgba(219, 39, 119, 0.05), transparent 40%), radial-gradient(circle at bottom left, rgba(244, 114, 182, 0.05), transparent 40%);
+      color: var(--text-color); 
+      font-family: 'Inter', sans-serif; 
+    }
+    
+    /* Glassmorphism Overrides */
+    .sidebar { background: var(--sidebar-bg); backdrop-filter: blur(12px); border-right: 1px solid rgba(255,255,255,0.5); }
+    .sidebar-header { color: var(--brand); border-bottom: 1px solid var(--border-color); }
+    .nav-links a { color: #64748b; font-weight: 400; }
+    .nav-links a:hover, .nav-links a.active { background: rgba(219, 39, 119, 0.05); color: var(--brand); }
+    .nav-links a.active { border-left: 2px solid var(--brand); font-weight: 600; }
+    
+    .topbar { background: transparent; border-bottom: none; }
+    .topbar-title { color: var(--text-color); font-weight: 300; font-size: 1.4rem; letter-spacing: 0.5px; }
+    .notification-btn { color: var(--brand); }
+    .avatar { background: rgba(219, 39, 119, 0.1); color: var(--brand); border: 1px solid var(--brand); }
+    
+    .stat-card { 
+      background: var(--card-bg); 
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.8); 
+      border-radius: 20px; 
+      box-shadow: 0 10px 30px -10px rgba(219, 39, 119, 0.1); 
+    }
+    .stat-info h3 { color: #94a3b8; font-weight: 400; font-size: 0.8rem; }
+    .stat-info .value { color: var(--text-color); font-weight: 300; font-size: 1.8rem; }
+    .stat-icon { background: transparent; color: var(--brand); font-size: 2rem;}
+    
+    .panel-section { 
+      background: var(--card-bg); 
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.8); 
+      border-radius: 20px; 
+      box-shadow: 0 10px 30px -10px rgba(219, 39, 119, 0.1); 
+    }
+    .panel-section-title { color: var(--brand); font-weight: 300; font-size: 1.3rem;}
+    
+    .btn-primary { 
+      background: linear-gradient(135deg, #db2777 0%, #f472b6 100%); 
+      color: #fff; 
+      border-radius: 30px; 
+      padding: 10px 24px; 
+      font-weight: 400; 
+      box-shadow: 0 4px 15px rgba(219, 39, 119, 0.2); 
+    }
+    
+    .data-table th { color: #94a3b8; border-bottom: 1px solid var(--border-color); font-weight: 400; }
+    .data-table td { color: var(--text-color); border-bottom: 1px dashed var(--border-color); font-weight: 300;}
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <i class="fa-solid fa-spa"></i> Glow CEO
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" data-target="view-dashboard" class="active"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+      <li><a href="#" data-target="view-agenda"><i class="fa-solid fa-calendar-days"></i> Agenda de Pacientes</a></li>
+      <li><a href="#" data-target="view-prontuarios"><i class="fa-solid fa-clipboard-list"></i> Prontuários</a></li>
+      <li><a href="#" data-target="view-estoque"><i class="fa-solid fa-box-open"></i> Estoque (Toxinas)</a></li>
+      <li><a href="#" data-target="view-financeiro"><i class="fa-solid fa-file-invoice-dollar"></i> Financeiro</a></li>
+      <li><a href="#" data-target="view-config"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="demo-glow.html" class="return-store"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="topbar-title">Gestão Clínica - Dra. Mariana</div>
+      <div class="topbar-actions">
+        <button class="notification-btn">
+          <i class="fa-regular fa-bell"></i>
+          <span class="badge">2</span>
+        </button>
+        <div class="user-profile">
+          <div class="avatar">D</div>
+          <div style="font-size: 0.85rem; color: #8f9bb3;">Dra. Mariana (CEO)</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Body -->
+    <div class="dashboard-container">
+      
+      <!-- VIEW: DASHBOARD -->
+      <div id="view-dashboard" class="dashboard-view active">
+        <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-user-check"></i></div>
+          <div class="stat-info">
+            <h3>Pacientes Hoje</h3>
+            <div class="value">8</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+          <div class="stat-info">
+            <h3>Previsão Faturamento</h3>
+            <div class="value">R$ 5.200 <span class="trend up"><i class="fa-solid fa-arrow-up"></i> 15%</span></div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-syringe"></i></div>
+          <div class="stat-info">
+            <h3>Procedimento de Hoje</h3>
+            <div class="value" style="font-size: 1.1rem; line-height: 1.5rem; margin-top: 5px;">Botox &<br>Preenchimento</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Data Table -->
+      <div class="panel-section">
+        <div class="panel-section-header">
+          <h2 class="panel-section-title">Agenda do Dia</h2>
+          <button class="btn-primary"><i class="fa-solid fa-plus"></i> Bloquear Horário</button>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Paciente</th>
+                <th>Procedimento</th>
+                <th>Horário</th>
+                <th>Status da Consulta</th>
+                <th>Pagamento</th>
+                <th>Prontuário</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ana Clara V.</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">(11) 98888-7777</span></td>
+                <td>Aplicação de Botox (3 Regiões)</td>
+                <td>09:00 - 10:00</td>
+                <td><span class="status-badge status-success">Atendimento Concluído</span></td>
+                <td><span style="color: #10b981; font-weight: 600;">Pago (Pix)</span></td>
+                <td><a href="#" style="color: var(--brand); text-decoration: underline;">Visualizar Ficha</a></td>
+              </tr>
+              <tr>
+                <td><strong>Camila R.</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">(11) 97777-6666</span></td>
+                <td>Preenchimento Labial (1ml)</td>
+                <td>10:30 - 11:30</td>
+                <td><span class="status-badge status-pending">Em Atendimento</span></td>
+                <td><span style="color: #f59e0b; font-weight: 600;">Sinal 50% Recebido</span></td>
+                <td><a href="#" style="color: var(--brand); text-decoration: underline;">Visualizar Ficha</a></td>
+              </tr>
+              <tr>
+                <td><strong>Patrícia S.</strong><br><span style="color: #8f9bb3; font-size: 0.8rem;">(11) 96666-5555</span></td>
+                <td>Limpeza de Pele Profunda</td>
+                <td>14:00 - 15:00</td>
+                <td><span class="status-badge status-info">Confirmada via WhatsApp</span></td>
+                <td><span style="color: #8f9bb3;">Aberto</span></td>
+                <td><a href="#" style="color: var(--brand); text-decoration: underline;">Nova Ficha</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- FIM VIEW: DASHBOARD -->
+
+      <!-- VIEW: AGENDA -->
+      <div id="view-agenda" class="dashboard-view">
+        <div class="panel-section">
+          <div class="panel-section-header">
+            <h2 class="panel-section-title">Calendário de Marcações</h2>
+            <button class="btn-primary"><i class="fa-solid fa-plus"></i> Nova Consulta</button>
+          </div>
+          <div style="background: rgba(255,255,255,0.02); height: 300px; border-radius: 8px; border: 1px dashed rgba(255,255,255,0.1); display: flex; align-items:center; justify-content: center; color: #8f9bb3;">
+            [ Visualização do Calendário Semanal ]
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW: PRONTUARIOS -->
+      <div id="view-prontuarios" class="dashboard-view">
+        <div class="panel-section">
+          <h2 class="panel-section-title">Gestão de Prontuários Eletrônicos</h2>
+          <table class="data-table" style="margin-top: 15px;">
+            <thead>
+              <tr><th>Paciente</th><th>Último Procedimento</th><th>Fotos Clínicas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Ana Clara V.</td><td>Botox (Há 3 meses)</td><td><a href="#" style="color: var(--brand);">Ver Fotos</a></td></tr>
+              <tr><td>Camila R.</td><td>Preenchimento Labial</td><td><a href="#" style="color: var(--brand);">Ver Fotos</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- VIEW: ESTOQUE -->
+      <div id="view-estoque" class="dashboard-view">
+        <div class="panel-section">
+          <h2 class="panel-section-title">Controle de Seringas e Toxinas</h2>
+          <table class="data-table">
+            <thead>
+              <tr><th>Produto</th><th>Lote / Validade</th><th>Quantidade</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Toxina Botulínica (100U)</td><td>L1923 - Dez/2026</td><td>5 Frascos</td></tr>
+              <tr><td>Ácido Hialurônico (1ml)</td><td>L8821 - Nov/2026</td><td>12 Seringas</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- VIEW: FINANCEIRO & CONFIG -->
+      <div id="view-financeiro" class="dashboard-view">
+        <div class="panel-section"><h2>Fluxo de Caixa Clínico</h2></div>
+      </div>
+      <div id="view-config" class="dashboard-view">
+        <div class="panel-section"><h2>Configurações da Clínica</h2></div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="assets/js/panel.js"></script>
+</body>
+</html>

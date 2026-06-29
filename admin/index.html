@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex CEO Panel - Premium</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Adicionando Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  
+  <!-- Efeito de Background Neon -->
+  <div class="glow-bg"></div>
+
+  <!-- Tela de Login -->
+  <div id="login-screen" class="screen active">
+    <div class="login-card glass-panel">
+      <div class="logo-glow">
+        <i class="fa-solid fa-meteor"></i> WEB VORTEX
+      </div>
+      <h2>Painel Executivo</h2>
+      <p>Acesso restrito. Insira a chave de liberação.</p>
+      <input type="password" id="admin-password" placeholder="••••••••" />
+      <button id="login-btn" class="btn btn-neon">Desbloquear <i class="fa-solid fa-lock-open"></i></button>
+      <p id="login-error" style="color: #ef4444; margin-top: 10px; display: none;">Chave Incorreta.</p>
+    </div>
+  </div>
+
+  <!-- Dashboard Principal -->
+  <div id="dashboard-screen" class="screen">
+    <aside class="sidebar glass-panel">
+      <div class="logo-glow">
+        <i class="fa-solid fa-meteor"></i> VORTEX
+      </div>
+      <ul class="nav">
+        <li data-tab="tab-dashboard" class="active"><i class="fa-solid fa-chart-pie"></i> Visão Geral</li>
+        <li data-tab="tab-leads"><i class="fa-solid fa-inbox"></i> Caixa de Entrada</li>
+        <li data-tab="tab-notes"><i class="fa-solid fa-list-check"></i> Minhas Anotações</li>
+        <li data-tab="tab-ai"><i class="fa-solid fa-robot"></i> Vortex AI</li>
+      </ul>
+      <button id="logout-btn" class="btn btn-outline" style="margin-top: auto; border-radius: 8px;">
+        <i class="fa-solid fa-power-off"></i> Encerrar Sessão
+      </button>
+    </aside>
+
+    <main class="content">
+      
+      <!-- TAB: DASHBOARD -->
+      <div id="tab-dashboard" class="tab-content active">
+        <header>
+          <h1><i class="fa-solid fa-chart-pie" style="color: var(--primary);"></i> Panorama de Negócios</h1>
+        </header>
+
+        <div class="stats-grid">
+          <div class="stat-card glass-panel">
+            <h3>Receita em Potencial</h3>
+            <p id="stat-revenue" class="text-glow">R$ 0</p>
+          </div>
+          <div class="stat-card glass-panel">
+            <h3>Orçamentos Recebidos</h3>
+            <p id="stat-budgets" class="text-glow">0</p>
+          </div>
+          <div class="stat-card glass-panel">
+            <h3>Contatos Pendentes</h3>
+            <p id="stat-contacts" class="text-glow">0</p>
+          </div>
+        </div>
+
+        <div class="charts-grid">
+          <div class="chart-container glass-panel">
+            <h3>Fluxo de Entradas (Últimos dias)</h3>
+            <canvas id="leadsChart"></canvas>
+          </div>
+          <div class="chart-container glass-panel">
+            <h3>Tipos de Projetos Buscados</h3>
+            <canvas id="typeChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: LEADS -->
+      <div id="tab-leads" class="tab-content">
+        <header>
+          <h1><i class="fa-solid fa-inbox" style="color: var(--primary);"></i> Central de Oportunidades</h1>
+          <button id="refresh-btn" class="btn btn-neon-sm"><i class="fa-solid fa-sync"></i> Atualizar Dados</button>
+        </header>
+
+        <div class="leads-table-container glass-panel">
+          <table class="leads-table">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Data</th>
+                <th>Nome</th>
+                <th>Origem</th>
+                <th>Detalhes</th>
+                <th>Ação Rápida</th>
+              </tr>
+            </thead>
+            <tbody id="leads-body">
+              <!-- Renderizado via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB: NOTAS / KANBAN -->
+      <div id="tab-notes" class="tab-content">
+        <header>
+          <h1><i class="fa-solid fa-list-check" style="color: #facc15;"></i> Kanban de Tarefas</h1>
+        </header>
+        
+        <div class="kanban-input-area glass-panel">
+          <input type="text" id="new-note-input" placeholder="O que precisamos executar agora?">
+          <button id="save-note-btn" class="btn btn-neon-sm"><i class="fa-solid fa-plus"></i> Nova Anotação</button>
+        </div>
+
+        <div class="kanban-board">
+          <div class="kanban-column" id="kanban-todo" data-status="todo">
+            <div class="kanban-col-header">
+              <h3>Anotações</h3>
+            </div>
+            <div class="kanban-col-body dropzone"></div>
+          </div>
+
+          <div class="kanban-column" id="kanban-doing" data-status="doing">
+            <div class="kanban-col-header" style="border-bottom-color: #3b82f6;">
+              <h3>Em Andamento</h3>
+            </div>
+            <div class="kanban-col-body dropzone"></div>
+          </div>
+
+          <div class="kanban-column" id="kanban-done" data-status="done">
+            <div class="kanban-col-header" style="border-bottom-color: #10b981;">
+              <h3>Concluído</h3>
+            </div>
+            <div class="kanban-col-body dropzone"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: VORTEX AI (Robozinho) -->
+      <div id="tab-ai" class="tab-content">
+        <header>
+          <h1><i class="fa-solid fa-robot" style="color: #c084fc;"></i> Vortex AI - Assistente Estratégico</h1>
+        </header>
+
+        <div class="ai-container glass-panel">
+          <div class="ai-avatar">
+            <div class="ai-orb"></div>
+          </div>
+          <div class="ai-chat-box">
+            <div id="ai-message">Olá CEO! Estou pronto para analisar o mercado e te dar uma estratégia matadora para a Vortex crescer. Basta pedir.</div>
+            <button id="btn-get-idea" class="btn btn-purple"><i class="fa-solid fa-bolt"></i> Gerar Estratégia de Crescimento</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

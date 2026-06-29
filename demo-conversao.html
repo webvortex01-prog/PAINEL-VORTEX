@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversão Máxima | Lançamento</title>
+  <link rel="stylesheet" href="assets/css/demos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --brand: #22c55e; --brand-glow: rgba(34, 197, 94, 0.4); }
+    body { background: #000; text-align: center; font-family: 'Inter', sans-serif;}
+    
+    .demo-header { display: none; } /* Landing pages hide header */
+    .return-vortex { top: 20px; bottom: auto; background: rgba(0,0,0,0.5); border: 1px solid #333;}
+    
+    .hero { padding-top: 100px; padding-bottom: 60px; height: auto; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle at center, rgba(34,197,94,0.1) 0%, #000 70%);}
+    
+    .headline { font-size: 1.2rem; color: #ef4444; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; background: rgba(239,68,68,0.1); padding: 5px 15px; border-radius: 4px; border: 1px solid rgba(239,68,68,0.3);}
+    
+    .hero h1 { font-size: 3.2rem; margin-bottom: 30px; font-weight: 800; max-width: 900px; line-height: 1.2; color: #fff;}
+    .hero h1 span { color: var(--brand); text-decoration: underline;}
+    
+    /* VSL Mock */
+    .video-container { width: 100%; max-width: 900px; margin: 0 auto 40px auto; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 2px #333;}
+    .video-mock { width: 100%; padding-top: 56.25%; background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover; position: relative;}
+    .video-mock::after { content: ''; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5);}
+    .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; background: var(--brand); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; color: #fff; cursor: pointer; z-index: 2; box-shadow: 0 0 30px var(--brand-glow); transition: transform 0.3s;}
+    .play-btn:hover { transform: translate(-50%, -50%) scale(1.1); }
+    
+    .btn-buy { background: var(--brand); color: #000; font-size: 1.8rem; padding: 25px 60px; border-radius: 8px; font-weight: 900; display: inline-block; text-decoration: none; box-shadow: 0 10px 30px var(--brand-glow); transition: all 0.3s; animation: pulse 2s infinite;}
+    .btn-buy:hover { background: #16a34a; color: #fff; }
+    
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); box-shadow: 0 0 40px var(--brand-glow);} 100% { transform: scale(1); } }
+    
+    .trust-badges { display: flex; justify-content: center; gap: 30px; margin-top: 30px; opacity: 0.6; }
+    .trust-badges img { height: 40px; filter: grayscale(100%) brightness(200%); }
+    
+    /* Sales Copy Section */
+    .copy-section { background: #fff; padding: 80px 20px; color: #000; text-align: left; }
+    .copy-container { max-width: 800px; margin: 0 auto; }
+    .copy-container h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 30px; line-height: 1.3;}
+    .copy-container p { font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 20px;}
+    
+    .highlight-box { background: #fef2f2; border-left: 5px solid #ef4444; padding: 30px; margin: 40px 0; border-radius: 0 8px 8px 0;}
+    
+    /* Modules */
+    .module-list { list-style: none; padding: 0; margin-top: 40px;}
+    .module-item { background: #f8fafc; border: 1px solid #e2e8f0; margin-bottom: 15px; padding: 25px; border-radius: 8px; display: flex; align-items: center; gap: 20px;}
+    .module-icon { background: var(--brand); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 24px; font-weight: bold; flex-shrink: 0;}
+    .module-text h3 { font-size: 1.3rem; margin-bottom: 5px;}
+    .module-text p { font-size: 1rem !important; color: #64748b !important; margin: 0 !important;}
+  </style>
+</head>
+<body>
+  <a href="modelos.html" class="return-vortex"><i class="fa-solid fa-arrow-left"></i> Fechar Demonstração</a>
+  
+  <section class="hero container">
+    <div class="headline"><i class="fa-solid fa-volume-high"></i> Certifique-se de que o som está ligado</div>
+    
+    <h1>Descubra o método exato de 3 passos para <span>escalar seu faturamento</span> em até 30 dias na internet.</h1>
+    <p style="color: #aaa; font-size: 1.3rem; max-width: 800px; margin-bottom: 40px;">Mesmo que você esteja começando do absoluto zero ou já tenha tentado de tudo sem ver resultados consistentes.</p>
+    
+    <div class="video-container">
+      <div class="video-mock">
+        <div class="play-btn"><i class="fa-solid fa-play" style="margin-left: 8px;"></i></div>
+      </div>
+      <!-- Fake progress bar -->
+      <div style="height: 5px; background: #333; width: 100%; position: absolute; bottom: 0;"><div style="height: 100%; width: 15%; background: var(--brand);"></div></div>
+    </div>
+    
+    <a href="#" class="btn-buy">SIM! QUERO GARANTIR MINHA VAGA AGORA</a>
+    
+    <p style="margin-top: 25px; color: #888; font-size: 1rem;"><i class="fa-solid fa-shield-halved" style="color: var(--brand);"></i> Pagamento 100% Seguro. Satisfação garantida ou seu dinheiro de volta.</p>
+    
+    <div class="trust-badges">
+      <i class="fa-brands fa-cc-visa" style="font-size: 40px;"></i>
+      <i class="fa-brands fa-cc-mastercard" style="font-size: 40px;"></i>
+      <i class="fa-brands fa-pix" style="font-size: 40px;"></i>
+    </div>
+  </section>
+  
+  <section class="copy-section">
+    <div class="copy-container">
+      <h2>Você sente que está deixando dinheiro na mesa todos os dias?</h2>
+      <p>Você acorda, posta no Instagram, cria conteúdo, investe o pouco dinheiro que sobra em anúncios e... <strong>nada acontece.</strong> As vendas pingam, mas nunca explodem. Parece que todo mundo no mercado digital descobriu um segredo que você não sabe.</p>
+      <p>A frustração bate. Você começa a questionar se o seu produto é bom o suficiente ou se você nasceu para isso. Mas eu preciso te dizer a verdade: <strong>o problema não é o seu produto.</strong></p>
+      
+      <div class="highlight-box">
+        <h3 style="color: #ef4444; font-size: 1.5rem; margin-bottom: 10px;">A grande mentira do mercado</h3>
+        <p style="color: #450a0a !important; margin:0 !important;">Eles disseram que bastava fazer dancinhas ou postar 3 vezes ao dia para ficar rico. Mentira. O que constrói negócios milionários não é volume de posts, é <strong>Estratégia de Conversão.</strong></p>
+      </div>
+      
+      <h2>O que você vai aprender no Método Máxima Conversão:</h2>
+      
+      <ul class="module-list">
+        <li class="module-item">
+          <div class="module-icon">1</div>
+          <div class="module-text">
+            <h3>A Base Magnética</h3>
+            <p>Como criar uma oferta tão irresistível que seu cliente vai se sentir idiota se não comprar de você hoje.</p>
+          </div>
+        </li>
+        <li class="module-item">
+          <div class="module-icon">2</div>
+          <div class="module-text">
+            <h3>Tráfego de Elite</h3>
+            <p>Esqueça cliques caros. Aprenda a segmentar compradores reais usando o novo algoritmo secreto do Facebook Ads.</p>
+          </div>
+        </li>
+        <li class="module-item">
+          <div class="module-icon">3</div>
+          <div class="module-text">
+            <h3>O Funil Automático</h3>
+            <p>A estrutura de páginas e automação de e-mails que vende por você enquanto você dorme, 24 horas por dia.</p>
+          </div>
+        </li>
+      </ul>
+      
+      <div style="text-align: center; margin-top: 60px;">
+        <h2 style="margin-bottom: 20px;">Você não tem risco nenhum.</h2>
+        <p>Você tem 7 dias de garantia incondicional. Se você aplicar o método e achar que não serviu para você, eu devolvo 100% do seu dinheiro. Sem perguntas.</p>
+        <a href="#" class="btn-buy" style="margin-top: 30px;">QUERO TER ACESSO AO MÉTODO</a>
+      </div>
+    </div>
+  </section>
+
+<footer class="demo-footer">
+  <div class="container demo-footer-grid">
+    <div>
+      <h4 style="font-family: 'Space Grotesk', sans-serif;">VORTEX</h4>
+      <p>Este é um site de demonstração de alta performance criado pela Vortex. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="#">Sobre o Modelo</a></li>
+        <li><a href="#">Diferenciais</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Suporte VIP</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> (66) 99937-3778</li>
+        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@vortex.com</li>
+        <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Atendimento Global</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-footer-bottom">
+    <p>&copy; 2026 Vortex Web. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="assets/js/demos.js"></script>
+</body>
+
+</html>

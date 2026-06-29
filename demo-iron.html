@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron | Crossfit & Gym</title>
+  <link rel="stylesheet" href="assets/css/demos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --brand: #facc15; --brand-glow: rgba(250, 204, 21, 0.4); }
+    body { background: #000; font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; }
+    
+    .demo-header { background: transparent; border-bottom: 2px solid rgba(255,255,255,0.1); z-index: 100;}
+    
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 100%),
+                  url('assets/img/demos/iron.png') center/cover no-repeat;
+    }
+    .hero h1 { font-size: 8rem; margin-bottom: 10px; font-weight: 800; line-height: 0.9; }
+    .hero h1 span { color: transparent; -webkit-text-stroke: 2px var(--brand); }
+    
+    .btn-main { background: var(--brand); color: #000; border-radius: 0; transform: skewX(-10deg); font-weight: 800; font-size: 1.5rem; padding: 20px 40px; border: 2px solid var(--brand); transition: all 0.3s;}
+    .btn-main:hover { background: #000; color: var(--brand); box-shadow: 0 0 30px var(--brand-glow); }
+    
+    /* Modalities */
+    .mod-card { background: #111; height: 350px; position: relative; overflow: hidden; display: flex; align-items: flex-end; transition: all 0.3s;}
+    .mod-card:hover { border-color: var(--brand); transform: scale(1.02); z-index: 10;}
+    .mod-bg { position: absolute; top:0; left:0; width: 100%; height: 100%; filter: grayscale(100%) opacity(0.5); transition: all 0.4s;}
+    .mod-card:hover .mod-bg { filter: grayscale(0%) opacity(0.8); transform: scale(1.1);}
+    .mod-content { position: relative; z-index: 2; padding: 30px; background: linear-gradient(0deg, #000 0%, transparent 100%); width: 100%;}
+    .mod-content h3 { font-size: 2rem; color: #fff; margin-bottom: 5px;}
+    .mod-content p { font-size: 0.9rem; color: var(--brand); text-transform: none; letter-spacing: 1px;}
+    
+    /* Pricing Table */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .pricing-card { background: #111; padding: 40px; text-align: center; border-top: 5px solid #333; transition: all 0.3s; }
+    .pricing-card:hover { border-color: var(--brand); transform: translateY(-10px); }
+    .pricing-card.featured { border-color: var(--brand); transform: scale(1.05); z-index: 2; box-shadow: 0 0 40px rgba(250,204,21,0.1);}
+    
+    .plan-name { font-size: 1.5rem; color: #888; margin-bottom: 15px; }
+    .plan-price { font-size: 4rem; color: #fff; font-weight: 800; margin-bottom: 30px; }
+    .plan-price span { font-size: 1.5rem; color: var(--brand); }
+    .plan-features { list-style: none; margin-bottom: 40px; text-transform: none;}
+    .plan-features li { padding: 15px 0; border-bottom: 1px solid #222; font-size: 1.1rem; color: #aaa; display: flex; align-items: center; justify-content: center; gap: 10px;}
+    .plan-features li i { color: var(--brand); }
+    
+    /* Coaches */
+    .coach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;}
+    .coach-card img { width: 100%; height: 350px; object-fit: cover; filter: grayscale(100%); margin-bottom: 15px; border-bottom: 4px solid var(--brand);}
+    .coach-card h4 { font-size: 1.5rem; margin-bottom: 5px;}
+    .coach-card p { font-size: 0.9rem; color: #888; text-transform: none;}
+  </style>
+</head>
+<body>
+  <a href="modelos.html" class="return-vortex"><i class="fa-solid fa-arrow-left"></i> Fechar Demonstração</a>
+  
+  <header class="demo-header">
+    <a href="#" class="demo-logo"><i class="fa-solid fa-dumbbell" style="color: var(--brand);"></i> IRON BOX</a>
+    <nav class="demo-nav"><a href="#">Modalidades</a><a href="#">Coaches</a><a href="#">Planos</a></nav>
+    <a href="#" class="btn btn-main" style="padding: 10px 20px; font-size: 14px; transform: none; border-width: 1px;">Free Pass</a>
+  </header>
+  
+  <section class="hero">
+    <div class="container" style="text-align: center;">
+      <h1>No Pain<br><span>No Gain</span></h1>
+      <p style="font-size: 1.2rem; color: #aaa; margin: 20px auto 40px auto; letter-spacing: 2px; max-width: 600px; text-transform: none;">O maior box de Crossfit e LPO da cidade. Equipamentos Rogue, mais de 1000m² de área útil e treinamento de alta intensidade para quem cansou de desculpas e quer construir resultados reais.</p>
+      <a href="#" class="btn btn-main">Matricule-se Agora</a>
+    </div>
+  </section>
+  
+  <section style="background: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title">Nossas Modalidades</h2>
+      <div class="grid-3">
+        <div class="mod-card">
+          <div class="mod-bg" style="background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="mod-content"><h3>Crossfit</h3><p>WODs Diários. Força e condicionamento extremo.</p></div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-bg" style="background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="mod-content"><h3>LPO</h3><p>Levantamento de peso olímpico técnico e pesado.</p></div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-bg" style="background: url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="mod-content"><h3>Endurance</h3><p>Foco absurdo na sua capacidade cardiovascular.</p></div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-bg" style="background: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="mod-content"><h3>Gymnastics</h3><p>Controle corporal, argolas e barras.</p></div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-bg" style="background: url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="mod-content"><h3>Muay Thai</h3><p>Combate, agilidade e queima calórica violenta.</p></div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-bg" style="background: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="mod-content"><h3>Open Gym</h3><p>Horários livres para você focar no seu treino extra.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #000;">
+    <div class="container">
+      <h2 class="section-title">Escolha sua Guerra</h2>
+      
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="plan-name">Mensal</div>
+          <div class="plan-price"><span>R$</span>250</div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Acesso Livre Todos os Dias</li>
+            <li><i class="fa-solid fa-check"></i> 1 Modalidade Extra</li>
+            <li><i class="fa-solid fa-xmark" style="color:#555;"></i> Avaliação Física</li>
+          </ul>
+          <a href="#" class="btn btn-main" style="width: 100%; font-size: 1.2rem; padding: 15px; transform: none;">Bora</a>
+        </div>
+        
+        <div class="pricing-card featured">
+          <div class="plan-name" style="color: var(--brand);">Semestral (O Alvo)</div>
+          <div class="plan-price"><span>R$</span>199<span>/mês</span></div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Acesso Livre a TUDO</li>
+            <li><i class="fa-solid fa-check"></i> Avaliação Física Biomecânica</li>
+            <li><i class="fa-solid fa-check"></i> App de Evolução de Cargas</li>
+          </ul>
+          <a href="#" class="btn btn-main" style="width: 100%; font-size: 1.2rem; padding: 15px; transform: none; background: #000; color: var(--brand);">Bora</a>
+        </div>
+        
+        <div class="pricing-card">
+          <div class="plan-name">Anual</div>
+          <div class="plan-price"><span>R$</span>159<span>/mês</span></div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Acesso Livre a TUDO</li>
+            <li><i class="fa-solid fa-check"></i> Avaliação Física Trimestral</li>
+            <li><i class="fa-solid fa-check"></i> Camiseta Oficial do Box</li>
+          </ul>
+          <a href="#" class="btn btn-main" style="width: 100%; font-size: 1.2rem; padding: 15px; transform: none;">Bora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section style="background: #111; padding-bottom: 120px;">
+    <div class="container">
+      <h2 class="section-title">Nossos Comandantes</h2>
+      <div class="coach-grid">
+        <div class="coach-card">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Coach 1">
+          <h4>Vitor 'Kong'</h4>
+          <p>Head Coach & LPO Specialist</p>
+        </div>
+        <div class="coach-card">
+          <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Coach 2">
+          <h4>Sarah Barros</h4>
+          <p>Endurance & Crossfit L2</p>
+        </div>
+        <div class="coach-card">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Coach 3">
+          <h4>Ricardo Silva</h4>
+          <p>Gymnastics Ninja</p>
+        </div>
+        <div class="coach-card">
+          <img src="https://images.unsplash.com/photo-1603287681836-b174ce5074c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Coach 4">
+          <h4>Amanda T.</h4>
+          <p>Muay Thai & Fisioterapia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="demo-footer">
+  <div class="container demo-footer-grid">
+    <div>
+      <h4 style="font-family: 'Space Grotesk', sans-serif;">VORTEX</h4>
+      <p>Este é um site de demonstração de alta performance criado pela Vortex. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="#">Sobre o Modelo</a></li>
+        <li><a href="#">Diferenciais</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Suporte VIP</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> (66) 99937-3778</li>
+        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@vortex.com</li>
+        <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Atendimento Global</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-footer-bottom">
+    <p>&copy; 2026 Vortex Web. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script src="assets/js/demos.js"></script>
+</body>
+
+</html>
