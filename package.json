@@ -4,13 +4,8 @@
   "description": "Website premium imersivo da Vortex",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "sqlite3": "^6.0.1"
+    "start": "lite-server",
+    "dev": "lite-server"
   },
   "devDependencies": {
     "lite-server": "^2.6.1"

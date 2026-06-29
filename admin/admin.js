@@ -78,17 +78,19 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { refreshBtn.innerHTML = '<i class="fa-solid fa-sync"></i> Atualizar Dados'; }, 500);
   });
 
-  async function fetchLeads() {
-    try {
-      const res = await fetch('/api/leads', { headers: { 'Authorization': authToken } });
-      if (res.status === 401) return logoutBtn.click();
-      
-      const data = await res.json();
-      leadsData = data.leads || [];
-      renderLeads();
-    } catch (err) {
-      console.error('Erro:', err);
-    }
+  function fetchLeads() {
+    return new Promise((resolve) => {
+      db.collection('leads').orderBy('created_at', 'desc').onSnapshot(snapshot => {
+        leadsData = [];
+        snapshot.forEach(doc => {
+          leadsData.push({ id: doc.id, ...doc.data() });
+        });
+        renderLeads();
+        resolve();
+      }, err => {
+        console.error('Erro ao buscar leads do Firestore:', err);
+      });
+    });
   }
 
   function renderLeads() {
@@ -155,11 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
       select.addEventListener('change', async (e) => {
         const id = e.target.dataset.id;
         const newStatus = e.target.value;
-        await fetch(`/api/leads/${id}/status`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Authorization': authToken },
-          body: JSON.stringify({ status: newStatus })
-        });
+        await db.collection('leads').doc(id).update({ status: newStatus });
       });
     });
   }
@@ -219,13 +217,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const colDoing = document.querySelector('#kanban-doing .kanban-col-body');
   const colDone = document.querySelector('#kanban-done .kanban-col-body');
 
-  async function fetchNotes() {
-    try {
-      const res = await fetch('/api/notes', { headers: { 'Authorization': authToken } });
-      const data = await res.json();
-      notesData = data.notes || [];
-      renderKanban();
-    } catch (err) {}
+  function fetchNotes() {
+    return new Promise((resolve) => {
+      db.collection('notes').orderBy('created_at', 'desc').onSnapshot(snapshot => {
+        notesData = [];
+        snapshot.forEach(doc => {
+          notesData.push({ id: doc.id, ...doc.data() });
+        });
+        renderKanban();
+        resolve();
+      });
+    });
   }
 
   saveNoteBtn.addEventListener('click', async () => {
@@ -234,14 +236,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     saveNoteBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
     try {
-      await fetch('/api/notes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': authToken },
-        body: JSON.stringify({ content })
+      await db.collection('notes').add({
+        content: content,
+        status: 'todo',
+        created_at: firebase.firestore.FieldValue.serverTimestamp()
       });
       newNoteInput.value = '';
-      await fetchNotes();
-    } catch (err) {}
+    } catch (err) {
+      console.error(err);
+    }
     saveNoteBtn.innerHTML = '<i class="fa-solid fa-plus"></i> Nova Anotação';
   });
 
@@ -284,8 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', async (e) => {
         if (!confirm('Apagar esta anotação?')) return;
         const id = e.target.dataset.id;
-        await fetch(`/api/notes/${id}`, { method: 'DELETE', headers: { 'Authorization': authToken } });
-        fetchNotes();
+        await db.collection('notes').doc(id).delete();
       });
     });
   }
@@ -314,14 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Update DB
         try {
-          await fetch(`/api/notes/${id}/status`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json', 'Authorization': authToken },
-            body: JSON.stringify({ status: newStatus })
-          });
-          // Silently sync the notes data array in memory
-          const noteObj = notesData.find(n => n.id == id);
-          if (noteObj) noteObj.status = newStatus;
+          await db.collection('notes').doc(id).update({ status: newStatus });
         } catch(err) {
           console.error("Failed to update status", err);
           fetchNotes(); // Revert on failure

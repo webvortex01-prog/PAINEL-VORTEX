@@ -155,27 +155,28 @@ class BudgetCalculator {
       
       let featuresArray = Array.from(this.selectedFeatures);
       
-      const payload = {
-        name: nameInput.value,
-        whatsapp: wppInput.value,
+      const detailsStr = JSON.stringify({
         typeName: typeName,
         pages: this.currentPages,
         features: featuresArray,
         total: totalPrice
-      };
+      });
 
-      fetch('/api/budget', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+      // Firebase version
+      db.collection('leads').add({
+        type: 'budget',
+        name: nameInput.value || 'Lead Anônimo',
+        whatsapp: wppInput.value,
+        details: detailsStr,
+        status: 'novo',
+        created_at: firebase.firestore.FieldValue.serverTimestamp()
       })
-      .then(res => res.json())
-      .then(data => {
+      .then((docRef) => {
         this.ctaBtn.innerHTML = '<i class="fa-solid fa-check"></i> Orçamento Enviado!';
         this.ctaBtn.style.backgroundColor = '#10b981';
       })
       .catch(err => {
-        console.error(err);
+        console.error("Erro ao enviar orçamento:", err);
         this.ctaBtn.innerHTML = 'Erro ao enviar. Tente novamente.';
         this.ctaBtn.disabled = false;
       });
