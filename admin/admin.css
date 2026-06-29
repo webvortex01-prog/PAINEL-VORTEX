@@ -423,7 +423,8 @@ header h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  height: calc(100vh - 250px); /* Fill remaining space */
+  height: calc(100vh - 250px);
+  min-height: 400px;
 }
 
 .kanban-column {

@@ -18,14 +18,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- LOGIN LOGIC ---
   loginBtn.addEventListener('click', () => {
     const pwd = passwordInput.value;
-    if (pwd === 'vortex2026') {
-      authToken = 'Bearer ' + pwd;
-      localStorage.setItem('vortex_admin_token', authToken);
-      loginError.style.display = 'none';
-      showDashboard();
-    } else {
-      loginError.style.display = 'block';
-    }
+    
+    // UI Feedback
+    const originalText = loginBtn.innerHTML;
+    loginBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Autenticando...';
+    loginBtn.disabled = true;
+
+    setTimeout(() => {
+      if (pwd === 'vortex2026') {
+        authToken = 'Bearer ' + pwd;
+        localStorage.setItem('vortex_admin_token', authToken);
+        loginError.style.display = 'none';
+        showDashboard();
+      } else {
+        loginError.style.display = 'block';
+      }
+      loginBtn.innerHTML = originalText;
+      loginBtn.disabled = false;
+    }, 600); // Simulate network delay for premium feel
   });
 
   logoutBtn.addEventListener('click', () => {
@@ -89,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resolve();
       }, err => {
         console.error('Erro ao buscar leads do Firestore:', err);
+        resolve(); // Previne que o painel fique travado
       });
     });
   }
@@ -110,7 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (lead.type === 'contact') contactCount++;
 
       const tr = document.createElement('tr');
-      const date = new Date(lead.created_at);
+      let date = new Date();
+      if (lead.created_at && lead.created_at.toDate) {
+        date = lead.created_at.toDate();
+      } else if (lead.created_at) {
+        date = new Date(lead.created_at);
+      }
       const dateStr = date.toLocaleDateString('pt-BR') + ' ' + date.toLocaleTimeString('pt-BR', {hour: '2-digit', minute:'2-digit'});
       
       const typeBadge = lead.type === 'budget' ? '<span class="badge budget">Orçamento</span>' : '<span class="badge contact">Contato</span>';
@@ -226,6 +242,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         renderKanban();
         resolve();
+      }, err => {
+        console.error('Erro ao buscar notes:', err);
+        resolve();
       });
     });
   }
@@ -259,7 +278,13 @@ document.addEventListener('DOMContentLoaded', () => {
       div.setAttribute('draggable', 'true');
       div.setAttribute('data-id', note.id);
       
-      const date = new Date(note.created_at).toLocaleDateString('pt-BR');
+      let dateObj = new Date();
+      if (note.created_at && note.created_at.toDate) {
+        dateObj = note.created_at.toDate();
+      } else if (note.created_at) {
+        dateObj = new Date(note.created_at);
+      }
+      const date = dateObj.toLocaleDateString('pt-BR');
       
       div.innerHTML = `
         <i class="fa-solid fa-trash delete-note" data-id="${note.id}"></i>
