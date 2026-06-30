@@ -1,4 +1,4 @@
-class 01 WEBSynth {
+class Web01Synth {
   constructor() {
     this.toggleBtn = document.getElementById('audio-toggle-btn');
     if (!this.toggleBtn) return;
@@ -137,8 +137,9 @@ class 01 WEBSynth {
 }
 
 // Global hook for other files to access
-window.01 WEBSynth = null;
+window.Web01Synth = null;
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.01 WEBSynth = new 01 WEBSynth();
+  // Initialize and attach to global scope
+  window.Web01Synth = new Web01Synth();
 });

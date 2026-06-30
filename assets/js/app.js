@@ -1,4 +1,4 @@
-class 01 WEBApp {
+class Web01App {
   constructor() {
     this.header = document.querySelector('header');
     this.menuToggle = document.getElementById('menu-toggle');
@@ -255,8 +255,8 @@ class 01 WEBApp {
         this.successMsg.style.display = 'block';
         
         // Play sound if synthesizer is loaded and active
-        if (window.01 WEBSynth && window.01 WEBSynth.isEnabled) {
-          window.01 WEBSynth.playSuccessSound();
+        if (window.Web01Synth && window.Web01Synth.isEnabled) {
+          window.Web01Synth.playSuccessSound();
         }
       })
       .catch(err => {
@@ -285,5 +285,5 @@ class 01 WEBApp {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new 01 WEBApp();
+  new Web01App();
 });

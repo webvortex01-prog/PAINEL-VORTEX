@@ -1,6 +1,6 @@
-class 01 WEBCanvas {
+class Web01Canvas {
   constructor() {
-    this.canvas = document.getElementById('01 WEB-canvas');
+    this.canvas = document.getElementById('web01-canvas');
     if (!this.canvas) return;
     
     this.ctx = this.canvas.bind ? this.canvas.getContext('2d') : this.canvas.getContext('2d');
@@ -146,5 +146,5 @@ class 01 WEBCanvas {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new 01 WEBCanvas();
+  new Web01Canvas();
 });

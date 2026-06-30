@@ -132,7 +132,7 @@ section {
 }
 
 /* Return Button Overlay */
-.return-01 WEB {
+.return-web01 {
   position: fixed;
   bottom: 20px;
   left: 20px;
@@ -151,7 +151,7 @@ section {
   transition: all 0.3s;
 }
 
-.return-01 WEB:hover {
+.return-web01:hover {
   background: #00f2fe;
   color: #000;
   border-color: #00f2fe;
