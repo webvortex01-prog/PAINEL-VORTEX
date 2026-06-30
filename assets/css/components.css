@@ -123,9 +123,16 @@ header .container {
 .audio-toggle:hover {
   background: rgba(0, 242, 254, 0.1);
   border-color: var(--primary);
-  box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
 }
 
+.calc-check-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Checkbox Items */
 /* Common Buttons */
 .btn {
   display: inline-flex;
@@ -1558,6 +1565,18 @@ footer {
   
   .calc-inputs-row {
     flex-direction: column;
+  }
+  
+  .calc-form-container, .calc-result-panel {
+    padding: 1.5rem;
+  }
+  
+  .calc-price-value {
+    font-size: 2.5rem;
+  }
+  
+  .calc-check-grid {
+    grid-template-columns: 1fr;
   }
   
   .features-grid {
