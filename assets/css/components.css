@@ -1066,6 +1066,19 @@ header .container {
   padding-bottom: 1.5rem;
 }
 
+.calc-inputs-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.calc-inputs-row .form-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
 .calc-price-row {
   display: flex;
   flex-direction: column;
@@ -1533,6 +1546,18 @@ footer {
   .performance-chart {
     width: 100%;
     height: auto;
+  }
+  
+  #header-cta-btn {
+    display: none;
+  }
+  
+  #header-logo {
+    white-space: nowrap;
+  }
+  
+  .calc-inputs-row {
+    flex-direction: column;
   }
   
   .features-grid {
