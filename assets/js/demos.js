@@ -1,4 +1,4 @@
-// demos.js - Shared functionality for Vortex Demo Sites
+// demos.js - Shared functionality for 01 WEB Demo Sites
 
 document.addEventListener('DOMContentLoaded', () => {
   // --- Toast System ---

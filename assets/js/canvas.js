@@ -1,6 +1,6 @@
-class VortexCanvas {
+class 01 WEBCanvas {
   constructor() {
-    this.canvas = document.getElementById('vortex-canvas');
+    this.canvas = document.getElementById('01 WEB-canvas');
     if (!this.canvas) return;
     
     this.ctx = this.canvas.bind ? this.canvas.getContext('2d') : this.canvas.getContext('2d');
@@ -83,7 +83,7 @@ class VortexCanvas {
       p.x += p.vx + (p.vx * Math.abs(this.scrollSpeed));
       p.y += p.vy + p.speed + this.scrollSpeed;
       
-      // Rotate around center slightly for Vortex feel
+      // Rotate around center slightly for 01 WEB feel
       const centerX = this.width / 2;
       const centerY = this.height / 2;
       const dx = p.x - centerX;
@@ -146,5 +146,5 @@ class VortexCanvas {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new VortexCanvas();
+  new 01 WEBCanvas();
 });

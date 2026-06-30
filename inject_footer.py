@@ -5,8 +5,8 @@ footer = """
 <footer class="demo-footer">
   <div class="container demo-footer-grid">
     <div>
-      <h4 style="font-family: 'Space Grotesk', sans-serif;">VORTEX</h4>
-      <p>Este é um site de demonstração de alta performance criado pela Vortex. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
+      <h4 style="font-family: 'Space Grotesk', sans-serif;">01 WEB</h4>
+      <p>Este é um site de demonstração de alta performance criado pela 01 WEB. Um ambiente controlado para mostrar o potencial de conversão e design que podemos entregar para o seu negócio.</p>
       <div class="footer-socials">
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
@@ -26,13 +26,13 @@ footer = """
       <h4>Contato</h4>
       <ul>
         <li><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> (66) 99937-3778</li>
-        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@vortex.com</li>
+        <li><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> contato@01 WEB.com</li>
         <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Atendimento Global</li>
       </ul>
     </div>
   </div>
   <div class="demo-footer-bottom">
-    <p>&copy; 2026 Vortex Web. Todos os direitos reservados.</p>
+    <p>&copy; 2026 01 Web. Todos os direitos reservados.</p>
   </div>
 </footer>
 <script src="assets/js/demos.js"></script>

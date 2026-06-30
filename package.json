@@ -1,7 +1,7 @@
 {
-  "name": "vortex-landing-page",
+  "name": "01 WEB-landing-page",
   "version": "1.0.0",
-  "description": "Website premium imersivo da Vortex",
+  "description": "Website premium imersivo da 01 WEB",
   "main": "server.js",
   "scripts": {
     "start": "lite-server",
@@ -10,6 +10,6 @@
   "devDependencies": {
     "lite-server": "^2.6.1"
   },
-  "author": "Vortex Digital",
+  "author": "01 WEB Digital",
   "license": "ISC"
 }

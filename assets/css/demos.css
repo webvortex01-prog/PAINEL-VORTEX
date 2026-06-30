@@ -132,7 +132,7 @@ section {
 }
 
 /* Return Button Overlay */
-.return-vortex {
+.return-01 WEB {
   position: fixed;
   bottom: 20px;
   left: 20px;
@@ -151,7 +151,7 @@ section {
   transition: all 0.3s;
 }
 
-.return-vortex:hover {
+.return-01 WEB:hover {
   background: #00f2fe;
   color: #000;
   border-color: #00f2fe;

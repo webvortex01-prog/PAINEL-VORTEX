@@ -1,4 +1,4 @@
-class VortexApp {
+class 01 WEBApp {
   constructor() {
     this.header = document.querySelector('header');
     this.menuToggle = document.getElementById('menu-toggle');
@@ -255,8 +255,8 @@ class VortexApp {
         this.successMsg.style.display = 'block';
         
         // Play sound if synthesizer is loaded and active
-        if (window.vortexSynth && window.vortexSynth.isEnabled) {
-          window.vortexSynth.playSuccessSound();
+        if (window.01 WEBSynth && window.01 WEBSynth.isEnabled) {
+          window.01 WEBSynth.playSuccessSound();
         }
       })
       .catch(err => {
@@ -285,5 +285,5 @@ class VortexApp {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new VortexApp();
+  new 01 WEBApp();
 });

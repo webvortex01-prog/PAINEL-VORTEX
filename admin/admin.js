@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const loginError = document.getElementById('login-error');
   const logoutBtn = document.getElementById('logout-btn');
   
-  let authToken = localStorage.getItem('vortex_admin_token') || null;
+  let authToken = localStorage.getItem('01 WEB_admin_token') || null;
   let leadsData = [];
   let notesData = [];
 
@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loginBtn.disabled = true;
 
     setTimeout(() => {
-      if (pwd === 'vortex2026') {
+      if (pwd === '01 WEB2026') {
         authToken = 'Bearer ' + pwd;
-        localStorage.setItem('vortex_admin_token', authToken);
+        localStorage.setItem('01 WEB_admin_token', authToken);
         loginError.style.display = 'none';
         showDashboard();
       } else {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   logoutBtn.addEventListener('click', () => {
     authToken = null;
-    localStorage.removeItem('vortex_admin_token');
+    localStorage.removeItem('01 WEB_admin_token');
     dashboardScreen.classList.remove('active');
     loginScreen.classList.add('active');
     passwordInput.value = '';
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const wppClean = lead.whatsapp ? lead.whatsapp.replace(/\D/g, '') : '';
       let wppBtn = '-';
       if (wppClean) {
-        let msg = lead.type === 'budget' ? 'Olá! Vi que você fez uma simulação no site da Vortex.' : 'Olá! Recebi seu contato pelo site da Vortex.';
+        let msg = lead.type === 'budget' ? 'Olá! Vi que você fez uma simulação no site da 01 WEB.' : 'Olá! Recebi seu contato pelo site da 01 WEB.';
         wppBtn = `<a href="https://wa.me/55${wppClean}?text=${encodeURIComponent(msg)}" target="_blank" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> Chamar</a>`;
       }
 
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- VORTEX AI (Robozinho) MODULE ---
+  // --- 01 WEB AI (Robozinho) MODULE ---
   const aiMessage = document.getElementById('ai-message');
   const btnGetIdea = document.getElementById('btn-get-idea');
   let isTyping = false;
@@ -358,12 +358,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const aiInsights = [
     "Dica de Copy: Troque 'Fazemos sites' por 'Transformamos visitantes em clientes em 5 segundos'. Foca no resultado, não no meio.",
     "Upsell de Manutenção: Quando entregar um site, ofereça R$150/mês para 'Hospedagem Premium + Backups de Segurança'. Gera receita recorrente.",
-    "Estratégia de Prospecção: Procure empresas locais no Google Maps com sites lentos ou quebrados. Mande um vídeo de 1 minuto mostrando o erro e como a Vortex resolve.",
+    "Estratégia de Prospecção: Procure empresas locais no Google Maps com sites lentos ou quebrados. Mande um vídeo de 1 minuto mostrando o erro e como a 01 WEB resolve.",
     "Dica de Fechamento: Se o cliente achar caro, não dê desconto. Em vez disso, divida o projeto em fases ou tire funcionalidades. Mantenha seu valor hora intacto.",
     "Escala com Templates: Tenha 3 arquiteturas base de código. Quando vender uma landing page, você não começa do zero, você personaliza os blocos. O lucro está na velocidade de entrega.",
     "Gatilho da Escassez: No final do orçamento, adicione: 'Esta proposta é válida por 5 dias, pois nossa esteira de desenvolvimento permite apenas X projetos simultâneos'.",
-    "Estratégia de Portfólio: Não coloque 20 sites meia-boca no portfólio. Escolha os 3 melhores, faça um Estudo de Caso de cada um (Desafio -> Solução Vortex -> Resultado).",
-    "Autoridade no Instagram: Em vez de postar print de site, poste você desenhando uma tela no Figma e explicando o PORQUE de cada botão. Mostre que a Vortex pensa no UX.",
+    "Estratégia de Portfólio: Não coloque 20 sites meia-boca no portfólio. Escolha os 3 melhores, faça um Estudo de Caso de cada um (Desafio -> Solução 01 WEB -> Resultado).",
+    "Autoridade no Instagram: Em vez de postar print de site, poste você desenhando uma tela no Figma e explicando o PORQUE de cada botão. Mostre que a 01 WEB pensa no UX.",
     "O poder do SEO Local: Ofereça a configuração do 'Google Meu Negócio' de brinde para fechamentos acima de R$2.000. Custa 20 min do seu tempo e entrega um super valor pro cliente."
   ];
 

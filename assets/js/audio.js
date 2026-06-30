@@ -1,4 +1,4 @@
-class VortexSynth {
+class 01 WEBSynth {
   constructor() {
     this.toggleBtn = document.getElementById('audio-toggle-btn');
     if (!this.toggleBtn) return;
@@ -137,8 +137,8 @@ class VortexSynth {
 }
 
 // Global hook for other files to access
-window.vortexSynth = null;
+window.01 WEBSynth = null;
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.vortexSynth = new VortexSynth();
+  window.01 WEBSynth = new 01 WEBSynth();
 });
